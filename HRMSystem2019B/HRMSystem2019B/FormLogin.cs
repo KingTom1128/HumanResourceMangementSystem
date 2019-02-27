@@ -13,6 +13,8 @@ namespace HRMSystem2019B
 {
     public partial class FormLogin : Form
     {
+        public static string userid;
+
         public FormLogin()
         {
             InitializeComponent();
@@ -45,13 +47,13 @@ namespace HRMSystem2019B
             while(sdr.Read())
             {
                 //判断是否被删除
-                if (Convert.ToBoolean(sdr["IsDeleted"]) == false)
+                if (Convert.ToBoolean(sdr["IsDeleted"]) == true)
                 {
                     CommonHelper.SuccessReply("此用户已被删除！");
                     this.DialogResult = DialogResult.Cancel;
                 }
                 //判断是否被锁定
-                else if (Convert.ToBoolean(sdr["IsLocked"]) == false)
+                else if (Convert.ToBoolean(sdr["IsLocked"]) == true)
                 {
                     CommonHelper.SuccessReply("此用户已被锁定！");
                     this.DialogResult = DialogResult.Cancel;
@@ -75,6 +77,7 @@ namespace HRMSystem2019B
                 //正常登录
                 else
                 {
+                    userid = user;
                     CommonHelper.SuccessReply("欢迎使用本系统！");
                     this.DialogResult = DialogResult.OK;
                 }

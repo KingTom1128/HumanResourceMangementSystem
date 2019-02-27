@@ -14,6 +14,7 @@ namespace HRMSystem2019B
     public partial class FormMain : Form
     {
 
+        string userid;
         string connStr = "Data Source = .; Initial Catalog = HRMDB; User ID = hrmtest; pwd = test";
         SqlConnection conn;
         SqlCommand comm;
@@ -25,13 +26,26 @@ namespace HRMSystem2019B
 
         private void FormMain_Load(object sender, EventArgs e)
         {
-            //FormLogin f1 = new FormLogin();
-            //if (f1.ShowDialog() != DialogResult.OK)
-            //{
-            //    Application.Exit();
-            //}
-            cmbIsDeleted.SelectedIndex = 0;
-            cmbIsLocked.SelectedIndex = 0;
+            FormLogin f1 = new FormLogin();
+            if (f1.ShowDialog() != DialogResult.OK)
+            {
+                Application.Exit();
+            }
+            userid = FormLogin.userid;
+            if (userid != "admin")
+            {
+                CommonHelper.FailedReply("您没有权限修改该数据库！");
+                btnAdd.Enabled = false;
+                btnDelete.Enabled = false;
+                btnLock.Enabled = false;
+                btnSearch.Enabled = false;
+                txtId.Enabled = false;
+                txtPassword.Enabled = false;
+                txtRealName.Enabled = false;
+                txtUserName.Enabled = false;
+                cmbIsDeleted.Enabled = false;
+                cmbIsLocked.Enabled = false;
+            }
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -67,12 +81,58 @@ namespace HRMSystem2019B
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-
+            bool IsDeleted = false;
+            if (cmbIsDeleted.Text == "Yes")
+            {
+                IsDeleted = true;
+            }
+            else
+            {
+                IsDeleted = false;
+            }
+            conn = new SqlConnection(connStr);
+            string sql = string.Format("update Operator set IsDeleted = '{0}' where UserName = '{1}'", IsDeleted, txtUserName.Text);
+            conn.Open();
+            comm = new SqlCommand(sql, conn);
+            int n = comm.ExecuteNonQuery();
+            if (n > 0)
+            {
+                CommonHelper.SuccessReply("操作成功！");
+                txtUserName.Text = "";
+            }
+            else
+            {
+                CommonHelper.SuccessReply("操作失败！");
+            }
+            conn.Close();
         }
 
         private void btnLock_Click(object sender, EventArgs e)
         {
-
+            bool IsLocked = false;
+            if (cmbIsLocked.Text == "Yes")
+            {
+                IsLocked = true;
+            }
+            else
+            {
+                IsLocked = false;
+            }
+            conn = new SqlConnection(connStr);
+            string sql = string.Format("update Operator set IsLocked = '{0}' where UserName = '{1}'", IsLocked, txtUserName.Text);
+            conn.Open();
+            comm = new SqlCommand(sql, conn);
+            int n = comm.ExecuteNonQuery();
+            if (n > 0)
+            {
+                CommonHelper.SuccessReply("操作成功！");
+                txtUserName.Text = "";
+            }
+            else
+            {
+                CommonHelper.SuccessReply("操作失败！");
+            }
+            conn.Close();
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -160,12 +220,10 @@ namespace HRMSystem2019B
             txtUserName.Visible = true;
             //根据需求隐藏
             lblId.Visible = false;
-            lblIsDeleted.Visible = false;
             lblIsLocked.Visible = false;
             lblPassword.Visible = false;
             lblRealName.Visible = false;
             txtId.Visible = false;
-            cmbIsDeleted.Visible = false;
             cmbIsLocked.Visible = false;
             txtPassword.Visible = false;
             txtRealName.Visible = false;
@@ -189,12 +247,10 @@ namespace HRMSystem2019B
             //根据需求隐藏
             lblId.Visible = false;
             lblIsDeleted.Visible = false;
-            lblIsLocked.Visible = false;
             lblPassword.Visible = false;
             lblRealName.Visible = false;
             txtId.Visible = false;
             cmbIsDeleted.Visible = false;
-            cmbIsLocked.Visible = false;
             txtPassword.Visible = false;
             txtRealName.Visible = false;
         }
