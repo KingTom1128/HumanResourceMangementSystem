@@ -77,7 +77,26 @@ namespace HRMSystem2019B
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-
+            lblDisplay.Text = "";
+            conn = new SqlConnection(connStr);
+            string sql = string.Format("select * from Operator where RealName = '{0}'", txtRealName.Text);
+            conn.Open();
+            comm = new SqlCommand(sql, conn);
+            SqlDataReader dr = comm.ExecuteReader();
+            while (dr.Read())
+            {
+                lblDisplay.Text = "UserName:  " + dr["UserName"].ToString() + "  Password:  " + dr["Password"].ToString() + "  RealName:  " + dr["RealName"].ToString() + "\n"; 
+            }
+            if (lblDisplay.Text != "")
+            {
+                CommonHelper.SuccessReply("查找成功！");
+            }
+            else
+            {
+                CommonHelper.FailedReply("查找失败！");
+            }
+            dr.Close();
+            conn.Close();
         }
 
         private void btnAdd_MouseEnter(object sender, EventArgs e)

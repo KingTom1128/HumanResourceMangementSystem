@@ -44,6 +44,7 @@
             this.lblIsLocked = new System.Windows.Forms.Label();
             this.cmbIsDeleted = new System.Windows.Forms.ComboBox();
             this.cmbIsLocked = new System.Windows.Forms.ComboBox();
+            this.lblDisplay = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnSearch
@@ -196,11 +197,20 @@
             this.cmbIsLocked.Size = new System.Drawing.Size(100, 23);
             this.cmbIsLocked.TabIndex = 17;
             // 
+            // lblDisplay
+            // 
+            this.lblDisplay.AutoSize = true;
+            this.lblDisplay.Location = new System.Drawing.Point(19, 292);
+            this.lblDisplay.Name = "lblDisplay";
+            this.lblDisplay.Size = new System.Drawing.Size(0, 15);
+            this.lblDisplay.TabIndex = 18;
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(520, 355);
+            this.Controls.Add(this.lblDisplay);
             this.Controls.Add(this.cmbIsLocked);
             this.Controls.Add(this.cmbIsDeleted);
             this.Controls.Add(this.lblIsLocked);
@@ -244,5 +254,6 @@
         private System.Windows.Forms.Label lblIsLocked;
         private System.Windows.Forms.ComboBox cmbIsDeleted;
         private System.Windows.Forms.ComboBox cmbIsLocked;
+        private System.Windows.Forms.Label lblDisplay;
     }
 }
