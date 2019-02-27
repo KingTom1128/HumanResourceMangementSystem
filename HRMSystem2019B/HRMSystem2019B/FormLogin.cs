@@ -44,26 +44,35 @@ namespace HRMSystem2019B
             SqlDataReader sdr = comm.ExecuteReader();
             while(sdr.Read())
             {
-                if (sdr["UserName"].ToString() != user)
+                //判断是否被删除
+                if (Convert.ToBoolean(sdr["IsDeleted"]) == false)
+                {
+                    CommonHelper.SuccessReply("此用户已被删除！");
+                    this.DialogResult = DialogResult.Cancel;
+                }
+                //判断是否被锁定
+                else if (Convert.ToBoolean(sdr["IsLocked"]) == false)
+                {
+                    CommonHelper.SuccessReply("此用户已被锁定！");
+                    this.DialogResult = DialogResult.Cancel;
+                }
+                //判断用户名或密码错误
+                else if (sdr["UserName"].ToString() != user && sdr["Password"].ToString() == password)
                 {
                     CommonHelper.SuccessReply("用户名错误！");
                     this.DialogResult = DialogResult.Cancel;
                 }
-                else if (sdr["Password"].ToString() != password)
+                else if (sdr["Password"].ToString() != password && sdr["UserName"].ToString() == user)
                 {
                     CommonHelper.SuccessReply("密码错误！");
                     this.DialogResult = DialogResult.Cancel;
                 }
-                //else if (Convert.ToBoolean(sdr["IsDeleted"]) == false)
-                //{
-                //    CommonHelper.SuccessReply("此用户已被删除！");
-                //    this.DialogResult = DialogResult.Cancel;
-                //}
-                //else if (Convert.ToBoolean(sdr["IsLocked"]) == false)
-                //{
-                //    CommonHelper.SuccessReply("此用户已被锁定！");
-                //    this.DialogResult = DialogResult.Cancel;
-                //}
+                else if (sdr["Password"].ToString() != password && sdr["UserName"].ToString() != user)
+                {
+                    CommonHelper.SuccessReply("用户名或密码错误！");
+                    this.DialogResult = DialogResult.Cancel;
+                }
+                //正常登录
                 else
                 {
                     CommonHelper.SuccessReply("欢迎使用本系统！");

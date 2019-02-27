@@ -28,65 +28,199 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnConfirm = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btnCancer = new System.Windows.Forms.Button();
-            this.dataGridView = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnLock = new System.Windows.Forms.Button();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.txtUserName = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtRealName = new System.Windows.Forms.TextBox();
+            this.lblId = new System.Windows.Forms.Label();
+            this.lblUserName = new System.Windows.Forms.Label();
+            this.lblPassword = new System.Windows.Forms.Label();
+            this.lblIsDeleted = new System.Windows.Forms.Label();
+            this.lblRealName = new System.Windows.Forms.Label();
+            this.lblIsLocked = new System.Windows.Forms.Label();
+            this.cmbIsDeleted = new System.Windows.Forms.ComboBox();
+            this.cmbIsLocked = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
-            // btnConfirm
+            // btnSearch
             // 
-            this.btnConfirm.Location = new System.Drawing.Point(51, 231);
-            this.btnConfirm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(79, 39);
-            this.btnConfirm.TabIndex = 0;
-            this.btnConfirm.Text = "确认";
-            this.btnConfirm.UseVisualStyleBackColor = true;
-            this.btnConfirm.Click += new System.EventHandler(this.button1_Click);
+            this.btnSearch.Location = new System.Drawing.Point(22, 63);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(75, 30);
+            this.btnSearch.TabIndex = 0;
+            this.btnSearch.Text = "查询";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            this.btnSearch.MouseEnter += new System.EventHandler(this.btnSearch_MouseEnter);
             // 
-            // textBox1
+            // btnAdd
             // 
-            this.textBox1.Location = new System.Drawing.Point(32, 13);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(132, 25);
-            this.textBox1.TabIndex = 1;
+            this.btnAdd.Location = new System.Drawing.Point(22, 119);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(75, 30);
+            this.btnAdd.TabIndex = 1;
+            this.btnAdd.Text = "添加";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.btnAdd.MouseEnter += new System.EventHandler(this.btnAdd_MouseEnter);
             // 
-            // btnCancer
+            // btnDelete
             // 
-            this.btnCancer.Location = new System.Drawing.Point(242, 231);
-            this.btnCancer.Margin = new System.Windows.Forms.Padding(4);
-            this.btnCancer.Name = "btnCancer";
-            this.btnCancer.Size = new System.Drawing.Size(79, 39);
-            this.btnCancer.TabIndex = 2;
-            this.btnCancer.Text = "取消";
-            this.btnCancer.UseVisualStyleBackColor = true;
+            this.btnDelete.Location = new System.Drawing.Point(22, 175);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(75, 30);
+            this.btnDelete.TabIndex = 2;
+            this.btnDelete.Text = "删除";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            this.btnDelete.MouseEnter += new System.EventHandler(this.btnDelete_MouseEnter);
             // 
-            // dataGridView
+            // btnLock
             // 
-            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Location = new System.Drawing.Point(51, 56);
-            this.dataGridView.Name = "dataGridView";
-            this.dataGridView.RowTemplate.Height = 27;
-            this.dataGridView.Size = new System.Drawing.Size(270, 150);
-            this.dataGridView.TabIndex = 3;
+            this.btnLock.Location = new System.Drawing.Point(22, 235);
+            this.btnLock.Name = "btnLock";
+            this.btnLock.Size = new System.Drawing.Size(75, 30);
+            this.btnLock.TabIndex = 3;
+            this.btnLock.Text = "锁定";
+            this.btnLock.UseVisualStyleBackColor = true;
+            this.btnLock.Click += new System.EventHandler(this.btnLock_Click);
+            this.btnLock.MouseEnter += new System.EventHandler(this.btnLock_MouseEnter);
+            // 
+            // txtId
+            // 
+            this.txtId.Location = new System.Drawing.Point(192, 68);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(100, 25);
+            this.txtId.TabIndex = 4;
+            // 
+            // txtUserName
+            // 
+            this.txtUserName.Location = new System.Drawing.Point(192, 148);
+            this.txtUserName.Name = "txtUserName";
+            this.txtUserName.Size = new System.Drawing.Size(100, 25);
+            this.txtUserName.TabIndex = 5;
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.Location = new System.Drawing.Point(192, 232);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(100, 25);
+            this.txtPassword.TabIndex = 6;
+            // 
+            // txtRealName
+            // 
+            this.txtRealName.Location = new System.Drawing.Point(383, 148);
+            this.txtRealName.Name = "txtRealName";
+            this.txtRealName.Size = new System.Drawing.Size(100, 25);
+            this.txtRealName.TabIndex = 8;
+            // 
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.Location = new System.Drawing.Point(132, 71);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(23, 15);
+            this.lblId.TabIndex = 10;
+            this.lblId.Text = "id";
+            // 
+            // lblUserName
+            // 
+            this.lblUserName.AutoSize = true;
+            this.lblUserName.Location = new System.Drawing.Point(112, 151);
+            this.lblUserName.Name = "lblUserName";
+            this.lblUserName.Size = new System.Drawing.Size(71, 15);
+            this.lblUserName.TabIndex = 11;
+            this.lblUserName.Text = "UserName";
+            // 
+            // lblPassword
+            // 
+            this.lblPassword.AutoSize = true;
+            this.lblPassword.Location = new System.Drawing.Point(112, 235);
+            this.lblPassword.Name = "lblPassword";
+            this.lblPassword.Size = new System.Drawing.Size(71, 15);
+            this.lblPassword.TabIndex = 12;
+            this.lblPassword.Text = "Password";
+            // 
+            // lblIsDeleted
+            // 
+            this.lblIsDeleted.AutoSize = true;
+            this.lblIsDeleted.Location = new System.Drawing.Point(298, 71);
+            this.lblIsDeleted.Name = "lblIsDeleted";
+            this.lblIsDeleted.Size = new System.Drawing.Size(79, 15);
+            this.lblIsDeleted.TabIndex = 13;
+            this.lblIsDeleted.Text = "IsDeleted";
+            // 
+            // lblRealName
+            // 
+            this.lblRealName.AutoSize = true;
+            this.lblRealName.Location = new System.Drawing.Point(298, 151);
+            this.lblRealName.Name = "lblRealName";
+            this.lblRealName.Size = new System.Drawing.Size(71, 15);
+            this.lblRealName.TabIndex = 14;
+            this.lblRealName.Text = "RealName";
+            // 
+            // lblIsLocked
+            // 
+            this.lblIsLocked.AutoSize = true;
+            this.lblIsLocked.Location = new System.Drawing.Point(298, 235);
+            this.lblIsLocked.Name = "lblIsLocked";
+            this.lblIsLocked.Size = new System.Drawing.Size(71, 15);
+            this.lblIsLocked.TabIndex = 15;
+            this.lblIsLocked.Text = "IsLocked";
+            // 
+            // cmbIsDeleted
+            // 
+            this.cmbIsDeleted.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbIsDeleted.FormattingEnabled = true;
+            this.cmbIsDeleted.Items.AddRange(new object[] {
+            "Yes",
+            "No"});
+            this.cmbIsDeleted.Location = new System.Drawing.Point(383, 68);
+            this.cmbIsDeleted.Name = "cmbIsDeleted";
+            this.cmbIsDeleted.Size = new System.Drawing.Size(100, 23);
+            this.cmbIsDeleted.TabIndex = 16;
+            // 
+            // cmbIsLocked
+            // 
+            this.cmbIsLocked.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbIsLocked.FormattingEnabled = true;
+            this.cmbIsLocked.Items.AddRange(new object[] {
+            "Yes",
+            "No"});
+            this.cmbIsLocked.Location = new System.Drawing.Point(383, 232);
+            this.cmbIsLocked.Name = "cmbIsLocked";
+            this.cmbIsLocked.Size = new System.Drawing.Size(100, 23);
+            this.cmbIsLocked.TabIndex = 17;
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(379, 328);
-            this.Controls.Add(this.dataGridView);
-            this.Controls.Add(this.btnCancer);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.btnConfirm);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ClientSize = new System.Drawing.Size(520, 355);
+            this.Controls.Add(this.cmbIsLocked);
+            this.Controls.Add(this.cmbIsDeleted);
+            this.Controls.Add(this.lblIsLocked);
+            this.Controls.Add(this.lblRealName);
+            this.Controls.Add(this.lblIsDeleted);
+            this.Controls.Add(this.lblPassword);
+            this.Controls.Add(this.lblUserName);
+            this.Controls.Add(this.lblId);
+            this.Controls.Add(this.txtRealName);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.txtUserName);
+            this.Controls.Add(this.txtId);
+            this.Controls.Add(this.btnLock);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.btnSearch);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormMain";
             this.Text = "FormMain";
             this.Load += new System.EventHandler(this.FormMain_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -94,9 +228,21 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnConfirm;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button btnCancer;
-        private System.Windows.Forms.DataGridView dataGridView;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnLock;
+        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.TextBox txtUserName;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.TextBox txtRealName;
+        private System.Windows.Forms.Label lblId;
+        private System.Windows.Forms.Label lblUserName;
+        private System.Windows.Forms.Label lblPassword;
+        private System.Windows.Forms.Label lblIsDeleted;
+        private System.Windows.Forms.Label lblRealName;
+        private System.Windows.Forms.Label lblIsLocked;
+        private System.Windows.Forms.ComboBox cmbIsDeleted;
+        private System.Windows.Forms.ComboBox cmbIsLocked;
     }
 }
