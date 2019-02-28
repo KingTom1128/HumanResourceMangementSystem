@@ -196,11 +196,12 @@ namespace HRMSystem2019B
             lblIsLocked.Visible = false;
             lblPassword.Visible = false;
             lblUserName.Visible = false;
-            txtId.Visible = false;
             cmbIsDeleted.Visible = false;
             cmbIsLocked.Visible = false;
+            txtId.Visible = false;
             txtPassword.Visible = false;
             txtUserName.Visible = false;
+            //txt
         }
 
         private void btnDelete_MouseEnter(object sender, EventArgs e)
