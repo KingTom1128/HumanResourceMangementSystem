@@ -30,3 +30,14 @@ D:\GitHub\HumanResourceMangementSystem\HRMSystem2019B\HRMSystem2019B\obj\Debug\H
 D:\GitHub\HumanResourceMangementSystem\HRMSystem2019B\HRMSystem2019B\obj\Debug\HRMSystem2019B.csproj.CoreCompileInputs.cache
 D:\GitHub\HumanResourceMangementSystem\HRMSystem2019B\HRMSystem2019B\obj\Debug\HRMSystem2019B.exe
 D:\GitHub\HumanResourceMangementSystem\HRMSystem2019B\HRMSystem2019B\obj\Debug\HRMSystem2019B.pdb
+D:\Study\软件项目实训\HumanResourceMangementSystem\HRMSystem2019B\HRMSystem2019B\bin\Debug\HRMSystem2019B.exe.config
+D:\Study\软件项目实训\HumanResourceMangementSystem\HRMSystem2019B\HRMSystem2019B\bin\Debug\HRMSystem2019B.exe
+D:\Study\软件项目实训\HumanResourceMangementSystem\HRMSystem2019B\HRMSystem2019B\bin\Debug\HRMSystem2019B.pdb
+D:\Study\软件项目实训\HumanResourceMangementSystem\HRMSystem2019B\HRMSystem2019B\obj\Debug\HRMSystem2019B.csprojAssemblyReference.cache
+D:\Study\软件项目实训\HumanResourceMangementSystem\HRMSystem2019B\HRMSystem2019B\obj\Debug\HRMSystem2019B.FormLogin.resources
+D:\Study\软件项目实训\HumanResourceMangementSystem\HRMSystem2019B\HRMSystem2019B\obj\Debug\HRMSystem2019B.FormMain.resources
+D:\Study\软件项目实训\HumanResourceMangementSystem\HRMSystem2019B\HRMSystem2019B\obj\Debug\HRMSystem2019B.Properties.Resources.resources
+D:\Study\软件项目实训\HumanResourceMangementSystem\HRMSystem2019B\HRMSystem2019B\obj\Debug\HRMSystem2019B.csproj.GenerateResource.cache
+D:\Study\软件项目实训\HumanResourceMangementSystem\HRMSystem2019B\HRMSystem2019B\obj\Debug\HRMSystem2019B.csproj.CoreCompileInputs.cache
+D:\Study\软件项目实训\HumanResourceMangementSystem\HRMSystem2019B\HRMSystem2019B\obj\Debug\HRMSystem2019B.exe
+D:\Study\软件项目实训\HumanResourceMangementSystem\HRMSystem2019B\HRMSystem2019B\obj\Debug\HRMSystem2019B.pdb
