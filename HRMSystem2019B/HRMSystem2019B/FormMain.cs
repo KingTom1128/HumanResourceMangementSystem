@@ -139,7 +139,7 @@ namespace HRMSystem2019B
         {
             lblDisplay.Text = "";
             conn = new SqlConnection(connStr);
-            string sql = string.Format("select * from Operator where RealName = '{0}'", txtRealName.Text);
+            string sql = string.Format("select * from Operator where UserName = '{0}'", txtUserName.Text);
             conn.Open();
             comm = new SqlCommand(sql, conn);
             SqlDataReader dr = comm.ExecuteReader();
@@ -195,12 +195,12 @@ namespace HRMSystem2019B
             lblIsDeleted.Visible = false;
             lblIsLocked.Visible = false;
             lblPassword.Visible = false;
-            lblUserName.Visible = false;
+            lblRealName.Visible = false;
             cmbIsDeleted.Visible = false;
             cmbIsLocked.Visible = false;
             txtId.Visible = false;
             txtPassword.Visible = false;
-            txtUserName.Visible = false;
+            txtRealName.Visible = false;
             //txt
         }
 
