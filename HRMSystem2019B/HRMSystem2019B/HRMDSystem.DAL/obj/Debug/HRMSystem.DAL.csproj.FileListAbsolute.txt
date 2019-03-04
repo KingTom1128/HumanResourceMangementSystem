@@ -1,0 +1,8 @@
+F:\HRMSystem2019B\HRMDSystem.DAL\bin\Debug\HRMDSystem.DAL.dll
+F:\HRMSystem2019B\HRMDSystem.DAL\bin\Debug\HRMDSystem.DAL.pdb
+F:\HRMSystem2019B\HRMDSystem.DAL\bin\Debug\HRMSystem.Model.dll
+F:\HRMSystem2019B\HRMDSystem.DAL\bin\Debug\HRMSystem.Model.pdb
+F:\HRMSystem2019B\HRMDSystem.DAL\obj\Debug\HRMSystem.DAL.csproj.CoreCompileInputs.cache
+F:\HRMSystem2019B\HRMDSystem.DAL\obj\Debug\HRMSystem.DAL.csproj.CopyComplete
+F:\HRMSystem2019B\HRMDSystem.DAL\obj\Debug\HRMDSystem.DAL.dll
+F:\HRMSystem2019B\HRMDSystem.DAL\obj\Debug\HRMDSystem.DAL.pdb

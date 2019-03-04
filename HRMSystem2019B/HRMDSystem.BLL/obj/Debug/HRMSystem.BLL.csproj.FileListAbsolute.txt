@@ -1,0 +1,11 @@
+F:\HRMSystem2019B\HRMDSystem.BLL\bin\Debug\HRMDSystem.BLL.dll
+F:\HRMSystem2019B\HRMDSystem.BLL\bin\Debug\HRMDSystem.BLL.pdb
+F:\HRMSystem2019B\HRMDSystem.BLL\bin\Debug\HRMDSystem.DAL.dll
+F:\HRMSystem2019B\HRMDSystem.BLL\bin\Debug\HRMSystem.Model.dll
+F:\HRMSystem2019B\HRMDSystem.BLL\bin\Debug\HRMDSystem.DAL.pdb
+F:\HRMSystem2019B\HRMDSystem.BLL\bin\Debug\HRMSystem.Model.pdb
+F:\HRMSystem2019B\HRMDSystem.BLL\obj\Debug\HRMSystem.BLL.csprojAssemblyReference.cache
+F:\HRMSystem2019B\HRMDSystem.BLL\obj\Debug\HRMSystem.BLL.csproj.CoreCompileInputs.cache
+F:\HRMSystem2019B\HRMDSystem.BLL\obj\Debug\HRMSystem.BLL.csproj.CopyComplete
+F:\HRMSystem2019B\HRMDSystem.BLL\obj\Debug\HRMDSystem.BLL.dll
+F:\HRMSystem2019B\HRMDSystem.BLL\obj\Debug\HRMDSystem.BLL.pdb

@@ -1,0 +1,5 @@
+D:\dotNetProjects\BData\HRMSystem2019B\HRMSystem.Model\bin\Debug\HRMSystem.Model.dll
+D:\dotNetProjects\BData\HRMSystem2019B\HRMSystem.Model\bin\Debug\HRMSystem.Model.pdb
+D:\dotNetProjects\BData\HRMSystem2019B\HRMSystem.Model\obj\Debug\HRMSystem.Model.csprojResolveAssemblyReference.cache
+D:\dotNetProjects\BData\HRMSystem2019B\HRMSystem.Model\obj\Debug\HRMSystem.Model.dll
+D:\dotNetProjects\BData\HRMSystem2019B\HRMSystem.Model\obj\Debug\HRMSystem.Model.pdb
