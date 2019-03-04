@@ -45,6 +45,7 @@
             this.cmbIsDeleted = new System.Windows.Forms.ComboBox();
             this.cmbIsLocked = new System.Windows.Forms.ComboBox();
             this.lblDisplay = new System.Windows.Forms.Label();
+            this.btnChangePassword = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnSearch
@@ -205,11 +206,22 @@
             this.lblDisplay.Size = new System.Drawing.Size(0, 15);
             this.lblDisplay.TabIndex = 18;
             // 
+            // btnChangePassword
+            // 
+            this.btnChangePassword.Location = new System.Drawing.Point(25, 279);
+            this.btnChangePassword.Name = "btnChangePassword";
+            this.btnChangePassword.Size = new System.Drawing.Size(458, 40);
+            this.btnChangePassword.TabIndex = 19;
+            this.btnChangePassword.Text = "修改密码";
+            this.btnChangePassword.UseVisualStyleBackColor = true;
+            this.btnChangePassword.Click += new System.EventHandler(this.btnChangePassword_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(520, 355);
+            this.Controls.Add(this.btnChangePassword);
             this.Controls.Add(this.lblDisplay);
             this.Controls.Add(this.cmbIsLocked);
             this.Controls.Add(this.cmbIsDeleted);
@@ -255,5 +267,6 @@
         private System.Windows.Forms.ComboBox cmbIsDeleted;
         private System.Windows.Forms.ComboBox cmbIsLocked;
         private System.Windows.Forms.Label lblDisplay;
+        private System.Windows.Forms.Button btnChangePassword;
     }
 }

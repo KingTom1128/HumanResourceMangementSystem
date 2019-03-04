@@ -34,7 +34,6 @@ namespace HRMSystem2019B
             userid = FormLogin.userid;
             if (userid != "admin")
             {
-                CommonHelper.FailedReply("您没有权限修改该数据库！");
                 btnAdd.Enabled = false;
                 btnDelete.Enabled = false;
                 btnLock.Enabled = false;
@@ -256,5 +255,10 @@ namespace HRMSystem2019B
             txtRealName.Visible = false;
         }
 
+        private void btnChangePassword_Click(object sender, EventArgs e)
+        {
+            FormPasswordService f1 = new FormPasswordService();
+            f1.Show();
+        }
     }
 }

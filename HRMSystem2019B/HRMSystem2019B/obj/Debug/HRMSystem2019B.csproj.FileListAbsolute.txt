@@ -80,3 +80,4 @@ D:\Study\软件项目实训\HumanResourceMangementSystem\HRMSystem2019B\HRMSyste
 D:\Study\软件项目实训\HumanResourceMangementSystem\HRMSystem2019B\HRMSystem2019B\bin\Debug\HRMSystem.Model.pdb
 D:\Study\软件项目实训\HumanResourceMangementSystem\HRMSystem2019B\HRMSystem2019B\bin\Debug\HRMDSystem.DAL.pdb
 D:\Study\软件项目实训\HumanResourceMangementSystem\HRMSystem2019B\HRMSystem2019B\obj\Debug\HRMSystem2019B.csproj.CopyComplete
+D:\Study\软件项目实训\HumanResourceMangementSystem\HRMSystem2019B\HRMSystem2019B\obj\Debug\HRMSystem2019B.FormPasswordService.resources
