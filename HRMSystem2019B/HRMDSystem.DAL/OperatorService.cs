@@ -20,11 +20,8 @@ namespace HRMDSystem.DAL
             SqlParameter paraUserName = new SqlParameter("@UserName", username);
             SqlCommand comm = new SqlCommand(sql, conn);
             comm.Parameters.Add(paraUserName);
-
             conn.Open();
-
             SqlDataReader sdr = comm.ExecuteReader();
-
             if (sdr.Read())
             {
                 op = new Operator();
@@ -35,12 +32,8 @@ namespace HRMDSystem.DAL
                 op.RealName = sdr["RealName"].ToString();
                 op.IsLocked = (bool)sdr["IsLocked"];
             }
-
-
             conn.Close();
             return op;
         }
-        
-
     }
 }

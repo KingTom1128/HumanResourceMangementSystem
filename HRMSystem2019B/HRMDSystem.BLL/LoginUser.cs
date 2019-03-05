@@ -12,13 +12,12 @@ namespace HRMSystem.BLL
     {
         private string username;
         private string password;
-
         public LoginUser(string un, string pwd)
         {
             username = un;
             password = pwd;
         }
-
+        public enum LoginResult { OK, UserNameError, PasswordError, DeletedError, LockedError }
         public LoginResult IsValid()
         {
             OperatorService opServ = new OperatorService();
@@ -44,7 +43,5 @@ namespace HRMSystem.BLL
                 return LoginResult.OK;
             }
         }
-
-        public enum LoginResult { OK, UserNameError, PasswordError ,DeletedError, LockedError}
     }
 }
