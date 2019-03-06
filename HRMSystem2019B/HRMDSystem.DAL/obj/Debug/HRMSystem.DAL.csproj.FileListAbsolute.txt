@@ -6,3 +6,12 @@ F:\HRMSystem2019B\HRMDSystem.DAL\obj\Debug\HRMSystem.DAL.csproj.CoreCompileInput
 F:\HRMSystem2019B\HRMDSystem.DAL\obj\Debug\HRMSystem.DAL.csproj.CopyComplete
 F:\HRMSystem2019B\HRMDSystem.DAL\obj\Debug\HRMDSystem.DAL.dll
 F:\HRMSystem2019B\HRMDSystem.DAL\obj\Debug\HRMDSystem.DAL.pdb
+D:\Study\软件项目实训\HumanResourceMangementSystem\HRMSystem2019B\HRMDSystem.DAL\bin\Debug\HRMDSystem.DAL.dll
+D:\Study\软件项目实训\HumanResourceMangementSystem\HRMSystem2019B\HRMDSystem.DAL\bin\Debug\HRMDSystem.DAL.pdb
+D:\Study\软件项目实训\HumanResourceMangementSystem\HRMSystem2019B\HRMDSystem.DAL\bin\Debug\HRMSystem.Model.dll
+D:\Study\软件项目实训\HumanResourceMangementSystem\HRMSystem2019B\HRMDSystem.DAL\bin\Debug\HRMSystem.Model.pdb
+D:\Study\软件项目实训\HumanResourceMangementSystem\HRMSystem2019B\HRMDSystem.DAL\obj\Debug\HRMSystem.DAL.csprojAssemblyReference.cache
+D:\Study\软件项目实训\HumanResourceMangementSystem\HRMSystem2019B\HRMDSystem.DAL\obj\Debug\HRMSystem.DAL.csproj.CoreCompileInputs.cache
+D:\Study\软件项目实训\HumanResourceMangementSystem\HRMSystem2019B\HRMDSystem.DAL\obj\Debug\HRMSystem.DAL.csproj.CopyComplete
+D:\Study\软件项目实训\HumanResourceMangementSystem\HRMSystem2019B\HRMDSystem.DAL\obj\Debug\HRMDSystem.DAL.dll
+D:\Study\软件项目实训\HumanResourceMangementSystem\HRMSystem2019B\HRMDSystem.DAL\obj\Debug\HRMDSystem.DAL.pdb

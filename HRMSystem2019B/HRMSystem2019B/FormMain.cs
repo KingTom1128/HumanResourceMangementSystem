@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HRMDSystem.BLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -60,27 +61,49 @@ namespace HRMSystem2019B
                 IsLocked = true;
             }
             txtId.Text = Guid.NewGuid().ToString();
-            conn = new SqlConnection(connStr);
-            string sql = string.Format("insert into Operator(Id, UserName, Password, IsDeleted, RealName, IsLocked) values('{0}', '{1}', '{2}', '{3}', '{4}', '{5}')", txtId.Text, txtUserName.Text, txtPassword.Text, IsDelete, txtRealName.Text, IsLocked);
-            conn.Open();
-            comm = new SqlCommand(sql, conn);
-            int n = comm.ExecuteNonQuery();
-            if (n > 0)
+            Guid guid = new Guid(txtId.Text);
+            Add ad = new Add(guid, txtUserName.Text, CommonHelper.GetMD5(txtPassword.Text.Trim()), IsDelete, txtRealName.Text, IsLocked);
+            bool f = ad.AddResult();
+            if (f == true)
             {
-                CommonHelper.SuccessReply("添加成功");
-                txtId.Text = "";
-                txtPassword.Text = "";
-                txtRealName.Text = "";
-                txtUserName.Text = "";
-                cmbIsDeleted.SelectedIndex = 0;
-                cmbIsLocked.SelectedIndex = 0;
+                CommonHelper.SuccessReply("添加成功！");
             }
-            conn.Close();
+            else
+            {
+                CommonHelper.FailedReply("添加失败！");
+            }
+            //bool IsDelete = false;
+            //bool IsLocked = false;
+            //if (cmbIsDeleted.Text == "Yes")
+            //{
+            //    IsDelete = true;
+            //}
+            //if (cmbIsLocked.Text == "Yes")
+            //{
+            //    IsLocked = true;
+            //}
+            //txtId.Text = Guid.NewGuid().ToString();
+            //conn = new SqlConnection(connStr);
+            //string sql = string.Format("insert into Operator(Id, UserName, Password, IsDeleted, RealName, IsLocked) values('{0}', '{1}', '{2}', '{3}', '{4}', '{5}')", txtId.Text, txtUserName.Text, txtPassword.Text, IsDelete, txtRealName.Text, IsLocked);
+            //conn.Open();
+            //comm = new SqlCommand(sql, conn);
+            //int n = comm.ExecuteNonQuery();
+            //if (n > 0)
+            //{
+            //    CommonHelper.SuccessReply("添加成功");
+            //    txtId.Text = "";
+            //    txtPassword.Text = "";
+            //    txtRealName.Text = "";
+            //    txtUserName.Text = "";
+            //    cmbIsDeleted.SelectedIndex = 0;
+            //    cmbIsLocked.SelectedIndex = 0;
+            //}
+            //conn.Close();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            bool IsDeleted = false;
+            bool IsDeleted;
             if (cmbIsDeleted.Text == "Yes")
             {
                 IsDeleted = true;
@@ -89,26 +112,46 @@ namespace HRMSystem2019B
             {
                 IsDeleted = false;
             }
-            conn = new SqlConnection(connStr);
-            string sql = string.Format("update Operator set IsDeleted = '{0}' where UserName = '{1}'", IsDeleted, txtUserName.Text);
-            conn.Open();
-            comm = new SqlCommand(sql, conn);
-            int n = comm.ExecuteNonQuery();
-            if (n > 0)
+            string username = txtUserName.Text.Trim();
+            Delete de = new Delete(username, IsDeleted);
+            bool f = de.DeleteResult();
+            if (f == true)
             {
                 CommonHelper.SuccessReply("操作成功！");
-                txtUserName.Text = "";
             }
             else
             {
-                CommonHelper.SuccessReply("操作失败！");
+                CommonHelper.FailedReply("操作失败！");
             }
-            conn.Close();
+            //bool IsDeleted = false;
+            //if (cmbIsDeleted.Text == "Yes")
+            //{
+            //    IsDeleted = true;
+            //}
+            //else
+            //{
+            //    IsDeleted = false;
+            //}
+            //conn = new SqlConnection(connStr);
+            //string sql = string.Format("update Operator set IsDeleted = '{0}' where UserName = '{1}'", IsDeleted, txtUserName.Text);
+            //conn.Open();
+            //comm = new SqlCommand(sql, conn);
+            //int n = comm.ExecuteNonQuery();
+            //if (n > 0)
+            //{
+            //    CommonHelper.SuccessReply("操作成功！");
+            //    txtUserName.Text = "";
+            //}
+            //else
+            //{
+            //    CommonHelper.SuccessReply("操作失败！");
+            //}
+            //conn.Close();
         }
 
         private void btnLock_Click(object sender, EventArgs e)
         {
-            bool IsLocked = false;
+            bool IsLocked;
             if (cmbIsLocked.Text == "Yes")
             {
                 IsLocked = true;
@@ -117,45 +160,78 @@ namespace HRMSystem2019B
             {
                 IsLocked = false;
             }
-            conn = new SqlConnection(connStr);
-            string sql = string.Format("update Operator set IsLocked = '{0}' where UserName = '{1}'", IsLocked, txtUserName.Text);
-            conn.Open();
-            comm = new SqlCommand(sql, conn);
-            int n = comm.ExecuteNonQuery();
-            if (n > 0)
+            string username = txtUserName.Text.Trim();
+            Lock lo = new Lock(username, IsLocked);
+            bool f = lo.LockResult();
+            if (f == true)
             {
                 CommonHelper.SuccessReply("操作成功！");
-                txtUserName.Text = "";
             }
             else
             {
-                CommonHelper.SuccessReply("操作失败！");
+                CommonHelper.FailedReply("操作失败！");
             }
-            conn.Close();
+            //bool IsLocked = false;
+            //if (cmbIsLocked.Text == "Yes")
+            //{
+            //    IsLocked = true;
+            //}
+            //else
+            //{
+            //    IsLocked = false;
+            //}
+            //conn = new SqlConnection(connStr);
+            //string sql = string.Format("update Operator set IsLocked = '{0}' where UserName = '{1}'", IsLocked, txtUserName.Text);
+            //conn.Open();
+            //comm = new SqlCommand(sql, conn);
+            //int n = comm.ExecuteNonQuery();
+            //if (n > 0)
+            //{
+            //    CommonHelper.SuccessReply("操作成功！");
+            //    txtUserName.Text = "";
+            //}
+            //else
+            //{
+            //    CommonHelper.SuccessReply("操作失败！");
+            //}
+            //conn.Close();
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
             lblDisplay.Text = "";
-            conn = new SqlConnection(connStr);
-            string sql = string.Format("select * from Operator where UserName = '{0}'", txtUserName.Text);
-            conn.Open();
-            comm = new SqlCommand(sql, conn);
-            SqlDataReader dr = comm.ExecuteReader();
-            while (dr.Read())
+            string username = txtUserName.Text.Trim();
+            Search sea = new Search(username);
+            string seaResult = sea.SearchResult();
+            if (seaResult != null)
             {
-                lblDisplay.Text = "UserName:  " + dr["UserName"].ToString() + "  Password:  " + dr["Password"].ToString() + "  RealName:  " + dr["RealName"].ToString() + "\n"; 
-            }
-            if (lblDisplay.Text != "")
-            {
-                CommonHelper.SuccessReply("查找成功！");
+                lblDisplay.Text = seaResult;
+                CommonHelper.SuccessReply("查找成功!");
             }
             else
             {
-                CommonHelper.FailedReply("查找失败！");
+                CommonHelper.FailedReply(seaResult);
             }
-            dr.Close();
-            conn.Close();
+            //lblDisplay.Text = "";
+            //conn = new SqlConnection(connStr);
+            //string sql = string.Format("select * from Operator where UserName = '{0}'", txtUserName.Text);
+            //conn.Open();
+            //comm = new SqlCommand(sql, conn);
+            //SqlDataReader dr = comm.ExecuteReader();
+            //while (dr.Read())
+            //{
+            //    lblDisplay.Text = "UserName:  " + dr["UserName"].ToString() + "\n" + "Password:  " + dr["Password"].ToString() + "\n" + "RealName:  " + dr["RealName"].ToString() + "\n"; 
+            //}
+            //if (lblDisplay.Text != "")
+            //{
+            //    CommonHelper.SuccessReply("查找成功！");
+            //}
+            //else
+            //{
+            //    CommonHelper.FailedReply("查找失败！");
+            //}
+            //dr.Close();
+            //conn.Close();
         }
 
         private void btnAdd_MouseEnter(object sender, EventArgs e)

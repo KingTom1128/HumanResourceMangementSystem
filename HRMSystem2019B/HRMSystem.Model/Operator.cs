@@ -14,7 +14,5 @@ namespace HRMSystem.Model
         public bool IsDeleted { get; set; }
         public string RealName { get; set; }
         public bool IsLocked { get; set; }
-
-
     }
 }

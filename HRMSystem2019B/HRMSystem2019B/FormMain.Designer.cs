@@ -208,7 +208,7 @@
             // 
             // btnChangePassword
             // 
-            this.btnChangePassword.Location = new System.Drawing.Point(25, 279);
+            this.btnChangePassword.Location = new System.Drawing.Point(25, 357);
             this.btnChangePassword.Name = "btnChangePassword";
             this.btnChangePassword.Size = new System.Drawing.Size(458, 40);
             this.btnChangePassword.TabIndex = 19;
@@ -220,7 +220,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(520, 355);
+            this.ClientSize = new System.Drawing.Size(520, 434);
             this.Controls.Add(this.btnChangePassword);
             this.Controls.Add(this.lblDisplay);
             this.Controls.Add(this.cmbIsLocked);
