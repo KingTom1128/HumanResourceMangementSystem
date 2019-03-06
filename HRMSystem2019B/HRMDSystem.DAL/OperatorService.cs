@@ -122,5 +122,26 @@ namespace HRMDSystem.DAL
                 return false;
             }
         }
+        //修改密码
+        public bool Update(string username, string newpwd)
+        {
+            string connStr = ConfigurationManager.ConnectionStrings["connStr"].ConnectionString;
+            SqlConnection conn = new SqlConnection(connStr);
+            string sql = string.Format("update Operator set Password = '{0}' where Username = '{1}'", newpwd, username);
+            SqlParameter paraUserName = new SqlParameter("@UserName", username);
+            SqlCommand comm = new SqlCommand(sql, conn);
+            comm.Parameters.Add(paraUserName);
+            conn.Open();
+            int n = (int)comm.ExecuteNonQuery();
+            conn.Close();
+            if (n > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

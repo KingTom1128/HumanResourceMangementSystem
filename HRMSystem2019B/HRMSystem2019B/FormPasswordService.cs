@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HRMDSystem.BLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace HRMSystem2019B
 {
     public partial class FormPasswordService : Form
     {
+        string userid;
         public FormPasswordService()
         {
             InitializeComponent();
@@ -24,8 +26,22 @@ namespace HRMSystem2019B
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            CommonHelper.SuccessReply("修改成功！");
-            this.Close();
+            Update up = new Update(userid, txtNewPassword.Text, txtConfirmPassword.Text);
+            bool f = up.UpdateResult(CommonHelper.GetMD5(txtNewPassword.Text.Trim()), CommonHelper.GetMD5(txtConfirmPassword.Text.Trim()));
+            if (f == true)
+            {
+                CommonHelper.SuccessReply("修改成功！");
+                this.Close();
+            }
+            else
+            {
+                CommonHelper.FailedReply("修改失败！");
+            }
+        }
+
+        private void FormPasswordService_Load(object sender, EventArgs e)
+        {
+            userid = FormLogin.userid;
         }
     }
 }

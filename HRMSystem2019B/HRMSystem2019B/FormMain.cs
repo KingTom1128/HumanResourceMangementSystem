@@ -16,10 +16,10 @@ namespace HRMSystem2019B
     {
 
         string userid;
-        string connStr = "Data Source = .; Initial Catalog = HRMDB; User ID = hrmtest; pwd = test";
-        SqlConnection conn;
-        SqlCommand comm;
-        SqlDataReader dr;
+        //string connStr = "Data Source = .; Initial Catalog = HRMDB; User ID = hrmtest; pwd = test";
+        //SqlConnection conn;
+        //SqlCommand comm;
+        //SqlDataReader dr;
         public FormMain()
         {
             InitializeComponent();

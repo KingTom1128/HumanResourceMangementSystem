@@ -28,29 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblOldPassword = new System.Windows.Forms.Label();
             this.lblNewPassword = new System.Windows.Forms.Label();
             this.lblConfirmPassword = new System.Windows.Forms.Label();
             this.btnConfirm = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.txtOldPassword = new System.Windows.Forms.TextBox();
             this.txtNewPassword = new System.Windows.Forms.TextBox();
             this.txtConfirmPassword = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // lblOldPassword
-            // 
-            this.lblOldPassword.AutoSize = true;
-            this.lblOldPassword.Location = new System.Drawing.Point(89, 64);
-            this.lblOldPassword.Name = "lblOldPassword";
-            this.lblOldPassword.Size = new System.Drawing.Size(52, 15);
-            this.lblOldPassword.TabIndex = 0;
-            this.lblOldPassword.Text = "原密码";
-            // 
             // lblNewPassword
             // 
             this.lblNewPassword.AutoSize = true;
-            this.lblNewPassword.Location = new System.Drawing.Point(89, 115);
+            this.lblNewPassword.Location = new System.Drawing.Point(94, 83);
             this.lblNewPassword.Name = "lblNewPassword";
             this.lblNewPassword.Size = new System.Drawing.Size(52, 15);
             this.lblNewPassword.TabIndex = 1;
@@ -59,7 +48,7 @@
             // lblConfirmPassword
             // 
             this.lblConfirmPassword.AutoSize = true;
-            this.lblConfirmPassword.Location = new System.Drawing.Point(74, 162);
+            this.lblConfirmPassword.Location = new System.Drawing.Point(79, 130);
             this.lblConfirmPassword.Name = "lblConfirmPassword";
             this.lblConfirmPassword.Size = new System.Drawing.Size(67, 15);
             this.lblConfirmPassword.TabIndex = 2;
@@ -85,24 +74,19 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // txtOldPassword
-            // 
-            this.txtOldPassword.Location = new System.Drawing.Point(167, 61);
-            this.txtOldPassword.Name = "txtOldPassword";
-            this.txtOldPassword.Size = new System.Drawing.Size(165, 25);
-            this.txtOldPassword.TabIndex = 5;
-            // 
             // txtNewPassword
             // 
-            this.txtNewPassword.Location = new System.Drawing.Point(167, 112);
+            this.txtNewPassword.Location = new System.Drawing.Point(172, 80);
             this.txtNewPassword.Name = "txtNewPassword";
+            this.txtNewPassword.PasswordChar = '*';
             this.txtNewPassword.Size = new System.Drawing.Size(165, 25);
             this.txtNewPassword.TabIndex = 6;
             // 
             // txtConfirmPassword
             // 
-            this.txtConfirmPassword.Location = new System.Drawing.Point(167, 159);
+            this.txtConfirmPassword.Location = new System.Drawing.Point(172, 127);
             this.txtConfirmPassword.Name = "txtConfirmPassword";
+            this.txtConfirmPassword.PasswordChar = '*';
             this.txtConfirmPassword.Size = new System.Drawing.Size(165, 25);
             this.txtConfirmPassword.TabIndex = 7;
             // 
@@ -113,27 +97,23 @@
             this.ClientSize = new System.Drawing.Size(445, 296);
             this.Controls.Add(this.txtConfirmPassword);
             this.Controls.Add(this.txtNewPassword);
-            this.Controls.Add(this.txtOldPassword);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.lblConfirmPassword);
             this.Controls.Add(this.lblNewPassword);
-            this.Controls.Add(this.lblOldPassword);
             this.Name = "FormPasswordService";
             this.Text = "PasswordService";
+            this.Load += new System.EventHandler(this.FormPasswordService_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblOldPassword;
         private System.Windows.Forms.Label lblNewPassword;
         private System.Windows.Forms.Label lblConfirmPassword;
         private System.Windows.Forms.Button btnConfirm;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.TextBox txtOldPassword;
         private System.Windows.Forms.TextBox txtNewPassword;
         private System.Windows.Forms.TextBox txtConfirmPassword;
     }
