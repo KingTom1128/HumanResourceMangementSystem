@@ -13,7 +13,7 @@ namespace HRMSystem2019B
 {
     public partial class FormPasswordService : Form
     {
-        string userid;
+
         public FormPasswordService()
         {
             InitializeComponent();
@@ -26,6 +26,8 @@ namespace HRMSystem2019B
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
+            UserInfo ui = UserInfo.GetInstance();
+            string  userid = ui.Id.ToString();
             Update up = new Update(userid, txtNewPassword.Text, txtConfirmPassword.Text);
             bool f = up.UpdateResult(CommonHelper.GetMD5(txtNewPassword.Text.Trim()), CommonHelper.GetMD5(txtConfirmPassword.Text.Trim()));
             if (f == true)
@@ -41,7 +43,7 @@ namespace HRMSystem2019B
 
         private void FormPasswordService_Load(object sender, EventArgs e)
         {
-            userid = FormLogin.userid;
+
         }
     }
 }

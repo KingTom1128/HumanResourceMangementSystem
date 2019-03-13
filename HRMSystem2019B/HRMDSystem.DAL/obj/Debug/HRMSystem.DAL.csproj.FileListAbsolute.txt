@@ -15,3 +15,10 @@ D:\Study\软件项目实训\HumanResourceMangementSystem\HRMSystem2019B\HRMDSyst
 D:\Study\软件项目实训\HumanResourceMangementSystem\HRMSystem2019B\HRMDSystem.DAL\obj\Debug\HRMSystem.DAL.csproj.CopyComplete
 D:\Study\软件项目实训\HumanResourceMangementSystem\HRMSystem2019B\HRMDSystem.DAL\obj\Debug\HRMDSystem.DAL.dll
 D:\Study\软件项目实训\HumanResourceMangementSystem\HRMSystem2019B\HRMDSystem.DAL\obj\Debug\HRMDSystem.DAL.pdb
+D:\dotNetProjects\BData\HRMSystem2019B\HRMDSystem.DAL\bin\Debug\HRMDSystem.DAL.dll
+D:\dotNetProjects\BData\HRMSystem2019B\HRMDSystem.DAL\bin\Debug\HRMDSystem.DAL.pdb
+D:\dotNetProjects\BData\HRMSystem2019B\HRMDSystem.DAL\bin\Debug\HRMSystem.Model.dll
+D:\dotNetProjects\BData\HRMSystem2019B\HRMDSystem.DAL\bin\Debug\HRMSystem.Model.pdb
+D:\dotNetProjects\BData\HRMSystem2019B\HRMDSystem.DAL\obj\Debug\HRMSystem.DAL.csprojResolveAssemblyReference.cache
+D:\dotNetProjects\BData\HRMSystem2019B\HRMDSystem.DAL\obj\Debug\HRMDSystem.DAL.dll
+D:\dotNetProjects\BData\HRMSystem2019B\HRMDSystem.DAL\obj\Debug\HRMDSystem.DAL.pdb

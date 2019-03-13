@@ -1,4 +1,6 @@
-﻿using HRMSystem.BLL;
+﻿using HRMDSystem.DAL;
+using HRMSystem.BLL;
+using HRMSystem.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,15 +17,10 @@ namespace HRMSystem2019B
 {
     public partial class FormLogin : Form
     {
-        public static string userid;
 
         public FormLogin()
         {
             InitializeComponent();
-        }
-
-        private void FormLogin_Load(object sender, EventArgs e)
-        {
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -35,77 +32,53 @@ namespace HRMSystem2019B
         {
             string username = txtUserName.Text.Trim();
             string password = CommonHelper.GetMD5(txtPassword.Text.Trim());
-            userid = username;
 
-            LoginUser lu = new LoginUser(username, password);
-            LoginUser.LoginResult lr = lu.IsValid();
+            OperatorService opsv = new OperatorService();
+            Operator op = opsv.GetOperator(username);
 
-            if (lr == LoginUser.LoginResult.UserNameError)
+            OperationLog log = new OperationLog();
+            OperationLogService logsv = new OperationLogService();
+
+            if (op == null || op.UserName != username)
             {
+                log.OperatorId = Guid.Empty;
+                log.ActionDate = DateTime.Now;
+                log.ActionDesc = username + ":用户名不正确";
                 CommonHelper.FailedReply("用户名错误！");
                 this.DialogResult = DialogResult.Cancel;
             }
-            else if (lr == LoginUser.LoginResult.PasswordError)
+            else if (op.Password != password)
             {
                 CommonHelper.FailedReply("密码错误！");
                 this.DialogResult = DialogResult.Cancel;
             }
-            else if (lr == LoginUser.LoginResult.LockedError)
+            else if (op.IsLocked == true)
             {
                 CommonHelper.FailedReply("用户锁定！");
                 this.DialogResult = DialogResult.Cancel;
             }
-            else if (lr == LoginUser.LoginResult.DeletedError)
+            else if(op.IsDeleted == true)
             {
                 CommonHelper.FailedReply("用户不存在！");
                 this.DialogResult = DialogResult.Cancel;
             }
             else
             {
+                UserInfo ui = UserInfo.GetInstance();
+                ui.Id = op.Id;
+                ui.UserName = op.UserName;
+                ui.Password = op.Password;
+                ui.RealName = op.RealName;
+
+                log.OperatorId = op.Id;
+                log.ActionDate = DateTime.Now;
+                log.ActionDesc = username + "登录成功！";
+                
+
                 CommonHelper.SuccessReply("登陆成功！");
                 this.DialogResult = DialogResult.OK;
             }
-
-            //while (sdr.Read())
-            //{
-            //    //判断是否被删除
-            //    if (Convert.ToBoolean(sdr["IsDeleted"]) == true)
-            //    {
-            //        CommonHelper.SuccessReply("此用户已被删除！");
-            //        this.DialogResult = DialogResult.Cancel;
-            //    }
-            //    //判断是否被锁定
-            //    else if (Convert.ToBoolean(sdr["IsLocked"]) == true)
-            //    {
-            //        CommonHelper.SuccessReply("此用户已被锁定！");
-            //        this.DialogResult = DialogResult.Cancel;
-            //    }
-            //    //判断用户名或密码错误
-            //    else if (sdr["UserName"].ToString() != user && sdr["Password"].ToString() == password)
-            //    {
-            //        CommonHelper.SuccessReply("用户名错误！");
-            //        this.DialogResult = DialogResult.Cancel;
-            //    }
-            //    else if (sdr["Password"].ToString() != password && sdr["UserName"].ToString() == user)
-            //    {
-            //        CommonHelper.SuccessReply("密码错误！");
-            //        this.DialogResult = DialogResult.Cancel;
-            //    }
-            //    else if (sdr["Password"].ToString() != password && sdr["UserName"].ToString() != user)
-            //    {
-            //        CommonHelper.SuccessReply("用户名或密码错误！");
-            //        this.DialogResult = DialogResult.Cancel;
-            //    }
-            //    //正常登录
-            //    else
-            //    {
-            //        userid = user;
-            //        CommonHelper.SuccessReply("欢迎使用本系统！");
-            //        this.DialogResult = DialogResult.OK;
-            //    }
-            //}
-            //sdr.Close();
-            //conn.Close();
+            logsv.Add(log);
         }
     }
 }

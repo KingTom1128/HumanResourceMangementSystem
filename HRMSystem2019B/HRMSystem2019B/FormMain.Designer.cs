@@ -28,175 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnLock = new System.Windows.Forms.Button();
-            this.txtId = new System.Windows.Forms.TextBox();
-            this.txtUserName = new System.Windows.Forms.TextBox();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.txtRealName = new System.Windows.Forms.TextBox();
-            this.lblId = new System.Windows.Forms.Label();
-            this.lblUserName = new System.Windows.Forms.Label();
-            this.lblPassword = new System.Windows.Forms.Label();
-            this.lblIsDeleted = new System.Windows.Forms.Label();
-            this.lblRealName = new System.Windows.Forms.Label();
-            this.lblIsLocked = new System.Windows.Forms.Label();
-            this.cmbIsDeleted = new System.Windows.Forms.ComboBox();
-            this.cmbIsLocked = new System.Windows.Forms.ComboBox();
             this.lblDisplay = new System.Windows.Forms.Label();
-            this.btnChangePassword = new System.Windows.Forms.Button();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.tssInfo = new System.Windows.Forms.ToolStripStatusLabel();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.系统功能ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.修改密码ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.系统锁定ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.计算器ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.切换账号ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.退出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.基础数据维护ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.部门管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.字典管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.公司信息管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.操作员管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.日志查询ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.员工管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.员工管理ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.薪资管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.生成工资单ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.打印工资单ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.帮助ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.关于我们ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.statusStrip1.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Location = new System.Drawing.Point(22, 63);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(75, 30);
-            this.btnSearch.TabIndex = 0;
-            this.btnSearch.Text = "查询";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            this.btnSearch.MouseEnter += new System.EventHandler(this.btnSearch_MouseEnter);
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.Location = new System.Drawing.Point(22, 119);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 30);
-            this.btnAdd.TabIndex = 1;
-            this.btnAdd.Text = "添加";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            this.btnAdd.MouseEnter += new System.EventHandler(this.btnAdd_MouseEnter);
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Location = new System.Drawing.Point(22, 175);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 30);
-            this.btnDelete.TabIndex = 2;
-            this.btnDelete.Text = "删除";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            this.btnDelete.MouseEnter += new System.EventHandler(this.btnDelete_MouseEnter);
-            // 
-            // btnLock
-            // 
-            this.btnLock.Location = new System.Drawing.Point(22, 235);
-            this.btnLock.Name = "btnLock";
-            this.btnLock.Size = new System.Drawing.Size(75, 30);
-            this.btnLock.TabIndex = 3;
-            this.btnLock.Text = "锁定";
-            this.btnLock.UseVisualStyleBackColor = true;
-            this.btnLock.Click += new System.EventHandler(this.btnLock_Click);
-            this.btnLock.MouseEnter += new System.EventHandler(this.btnLock_MouseEnter);
-            // 
-            // txtId
-            // 
-            this.txtId.Location = new System.Drawing.Point(192, 68);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(100, 25);
-            this.txtId.TabIndex = 4;
-            // 
-            // txtUserName
-            // 
-            this.txtUserName.Location = new System.Drawing.Point(192, 148);
-            this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(100, 25);
-            this.txtUserName.TabIndex = 5;
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.Location = new System.Drawing.Point(192, 232);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(100, 25);
-            this.txtPassword.TabIndex = 6;
-            // 
-            // txtRealName
-            // 
-            this.txtRealName.Location = new System.Drawing.Point(383, 148);
-            this.txtRealName.Name = "txtRealName";
-            this.txtRealName.Size = new System.Drawing.Size(100, 25);
-            this.txtRealName.TabIndex = 8;
-            // 
-            // lblId
-            // 
-            this.lblId.AutoSize = true;
-            this.lblId.Location = new System.Drawing.Point(132, 71);
-            this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(23, 15);
-            this.lblId.TabIndex = 10;
-            this.lblId.Text = "id";
-            // 
-            // lblUserName
-            // 
-            this.lblUserName.AutoSize = true;
-            this.lblUserName.Location = new System.Drawing.Point(112, 151);
-            this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(71, 15);
-            this.lblUserName.TabIndex = 11;
-            this.lblUserName.Text = "UserName";
-            // 
-            // lblPassword
-            // 
-            this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(112, 235);
-            this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(71, 15);
-            this.lblPassword.TabIndex = 12;
-            this.lblPassword.Text = "Password";
-            // 
-            // lblIsDeleted
-            // 
-            this.lblIsDeleted.AutoSize = true;
-            this.lblIsDeleted.Location = new System.Drawing.Point(298, 71);
-            this.lblIsDeleted.Name = "lblIsDeleted";
-            this.lblIsDeleted.Size = new System.Drawing.Size(79, 15);
-            this.lblIsDeleted.TabIndex = 13;
-            this.lblIsDeleted.Text = "IsDeleted";
-            // 
-            // lblRealName
-            // 
-            this.lblRealName.AutoSize = true;
-            this.lblRealName.Location = new System.Drawing.Point(298, 151);
-            this.lblRealName.Name = "lblRealName";
-            this.lblRealName.Size = new System.Drawing.Size(71, 15);
-            this.lblRealName.TabIndex = 14;
-            this.lblRealName.Text = "RealName";
-            // 
-            // lblIsLocked
-            // 
-            this.lblIsLocked.AutoSize = true;
-            this.lblIsLocked.Location = new System.Drawing.Point(298, 235);
-            this.lblIsLocked.Name = "lblIsLocked";
-            this.lblIsLocked.Size = new System.Drawing.Size(71, 15);
-            this.lblIsLocked.TabIndex = 15;
-            this.lblIsLocked.Text = "IsLocked";
-            // 
-            // cmbIsDeleted
-            // 
-            this.cmbIsDeleted.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbIsDeleted.FormattingEnabled = true;
-            this.cmbIsDeleted.Items.AddRange(new object[] {
-            "Yes",
-            "No"});
-            this.cmbIsDeleted.Location = new System.Drawing.Point(383, 68);
-            this.cmbIsDeleted.Name = "cmbIsDeleted";
-            this.cmbIsDeleted.Size = new System.Drawing.Size(100, 23);
-            this.cmbIsDeleted.TabIndex = 16;
-            // 
-            // cmbIsLocked
-            // 
-            this.cmbIsLocked.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbIsLocked.FormattingEnabled = true;
-            this.cmbIsLocked.Items.AddRange(new object[] {
-            "Yes",
-            "No"});
-            this.cmbIsLocked.Location = new System.Drawing.Point(383, 232);
-            this.cmbIsLocked.Name = "cmbIsLocked";
-            this.cmbIsLocked.Size = new System.Drawing.Size(100, 23);
-            this.cmbIsLocked.TabIndex = 17;
             // 
             // lblDisplay
             // 
@@ -206,67 +64,232 @@
             this.lblDisplay.Size = new System.Drawing.Size(0, 15);
             this.lblDisplay.TabIndex = 18;
             // 
-            // btnChangePassword
+            // statusStrip1
             // 
-            this.btnChangePassword.Location = new System.Drawing.Point(25, 357);
-            this.btnChangePassword.Name = "btnChangePassword";
-            this.btnChangePassword.Size = new System.Drawing.Size(458, 40);
-            this.btnChangePassword.TabIndex = 19;
-            this.btnChangePassword.Text = "修改密码";
-            this.btnChangePassword.UseVisualStyleBackColor = true;
-            this.btnChangePassword.Click += new System.EventHandler(this.btnChangePassword_Click);
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tssInfo});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 525);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
+            this.statusStrip1.Size = new System.Drawing.Size(1181, 25);
+            this.statusStrip1.TabIndex = 20;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // tssInfo
+            // 
+            this.tssInfo.Name = "tssInfo";
+            this.tssInfo.Size = new System.Drawing.Size(167, 20);
+            this.tssInfo.Text = "toolStripStatusLabel1";
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.系统功能ToolStripMenuItem,
+            this.基础数据维护ToolStripMenuItem,
+            this.员工管理ToolStripMenuItem,
+            this.薪资管理ToolStripMenuItem,
+            this.帮助ToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1181, 28);
+            this.menuStrip1.TabIndex = 21;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // 系统功能ToolStripMenuItem
+            // 
+            this.系统功能ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.修改密码ToolStripMenuItem,
+            this.系统锁定ToolStripMenuItem,
+            this.计算器ToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.切换账号ToolStripMenuItem,
+            this.退出ToolStripMenuItem});
+            this.系统功能ToolStripMenuItem.Name = "系统功能ToolStripMenuItem";
+            this.系统功能ToolStripMenuItem.Size = new System.Drawing.Size(81, 24);
+            this.系统功能ToolStripMenuItem.Text = "系统功能";
+            // 
+            // 修改密码ToolStripMenuItem
+            // 
+            this.修改密码ToolStripMenuItem.Name = "修改密码ToolStripMenuItem";
+            this.修改密码ToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
+            this.修改密码ToolStripMenuItem.Text = "修改密码";
+            this.修改密码ToolStripMenuItem.Click += new System.EventHandler(this.修改密码ToolStripMenuItem_Click);
+            // 
+            // 系统锁定ToolStripMenuItem
+            // 
+            this.系统锁定ToolStripMenuItem.Name = "系统锁定ToolStripMenuItem";
+            this.系统锁定ToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
+            this.系统锁定ToolStripMenuItem.Text = "系统锁定";
+            // 
+            // 计算器ToolStripMenuItem
+            // 
+            this.计算器ToolStripMenuItem.Name = "计算器ToolStripMenuItem";
+            this.计算器ToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
+            this.计算器ToolStripMenuItem.Text = "计算器";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(141, 6);
+            // 
+            // 切换账号ToolStripMenuItem
+            // 
+            this.切换账号ToolStripMenuItem.Name = "切换账号ToolStripMenuItem";
+            this.切换账号ToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
+            this.切换账号ToolStripMenuItem.Text = "切换账号";
+            this.切换账号ToolStripMenuItem.Click += new System.EventHandler(this.切换账号ToolStripMenuItem_Click);
+            // 
+            // 退出ToolStripMenuItem
+            // 
+            this.退出ToolStripMenuItem.Name = "退出ToolStripMenuItem";
+            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
+            this.退出ToolStripMenuItem.Text = "退出";
+            this.退出ToolStripMenuItem.Click += new System.EventHandler(this.退出ToolStripMenuItem_Click);
+            // 
+            // 基础数据维护ToolStripMenuItem
+            // 
+            this.基础数据维护ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.部门管理ToolStripMenuItem,
+            this.字典管理ToolStripMenuItem,
+            this.公司信息管理ToolStripMenuItem,
+            this.操作员管理ToolStripMenuItem,
+            this.日志查询ToolStripMenuItem});
+            this.基础数据维护ToolStripMenuItem.Name = "基础数据维护ToolStripMenuItem";
+            this.基础数据维护ToolStripMenuItem.Size = new System.Drawing.Size(111, 24);
+            this.基础数据维护ToolStripMenuItem.Text = "基础数据维护";
+            // 
+            // 部门管理ToolStripMenuItem
+            // 
+            this.部门管理ToolStripMenuItem.Name = "部门管理ToolStripMenuItem";
+            this.部门管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.部门管理ToolStripMenuItem.Text = "部门管理";
+            // 
+            // 字典管理ToolStripMenuItem
+            // 
+            this.字典管理ToolStripMenuItem.Name = "字典管理ToolStripMenuItem";
+            this.字典管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.字典管理ToolStripMenuItem.Text = "字典管理";
+            // 
+            // 公司信息管理ToolStripMenuItem
+            // 
+            this.公司信息管理ToolStripMenuItem.Name = "公司信息管理ToolStripMenuItem";
+            this.公司信息管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.公司信息管理ToolStripMenuItem.Text = "公司信息管理";
+            // 
+            // 操作员管理ToolStripMenuItem
+            // 
+            this.操作员管理ToolStripMenuItem.Name = "操作员管理ToolStripMenuItem";
+            this.操作员管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.操作员管理ToolStripMenuItem.Text = "操作员管理";
+            this.操作员管理ToolStripMenuItem.Click += new System.EventHandler(this.操作员管理ToolStripMenuItem_Click);
+            // 
+            // 日志查询ToolStripMenuItem
+            // 
+            this.日志查询ToolStripMenuItem.Name = "日志查询ToolStripMenuItem";
+            this.日志查询ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.日志查询ToolStripMenuItem.Text = "日志查询";
+            this.日志查询ToolStripMenuItem.Click += new System.EventHandler(this.日志查询ToolStripMenuItem_Click);
+            // 
+            // 员工管理ToolStripMenuItem
+            // 
+            this.员工管理ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.员工管理ToolStripMenuItem1});
+            this.员工管理ToolStripMenuItem.Name = "员工管理ToolStripMenuItem";
+            this.员工管理ToolStripMenuItem.Size = new System.Drawing.Size(81, 24);
+            this.员工管理ToolStripMenuItem.Text = "员工管理";
+            // 
+            // 员工管理ToolStripMenuItem1
+            // 
+            this.员工管理ToolStripMenuItem1.Name = "员工管理ToolStripMenuItem1";
+            this.员工管理ToolStripMenuItem1.Size = new System.Drawing.Size(216, 26);
+            this.员工管理ToolStripMenuItem1.Text = "员工管理";
+            // 
+            // 薪资管理ToolStripMenuItem
+            // 
+            this.薪资管理ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.生成工资单ToolStripMenuItem,
+            this.打印工资单ToolStripMenuItem});
+            this.薪资管理ToolStripMenuItem.Name = "薪资管理ToolStripMenuItem";
+            this.薪资管理ToolStripMenuItem.Size = new System.Drawing.Size(81, 24);
+            this.薪资管理ToolStripMenuItem.Text = "薪资管理";
+            // 
+            // 生成工资单ToolStripMenuItem
+            // 
+            this.生成工资单ToolStripMenuItem.Name = "生成工资单ToolStripMenuItem";
+            this.生成工资单ToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
+            this.生成工资单ToolStripMenuItem.Text = "生成工资单";
+            // 
+            // 打印工资单ToolStripMenuItem
+            // 
+            this.打印工资单ToolStripMenuItem.Name = "打印工资单ToolStripMenuItem";
+            this.打印工资单ToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
+            this.打印工资单ToolStripMenuItem.Text = "打印工资单";
+            // 
+            // 帮助ToolStripMenuItem
+            // 
+            this.帮助ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.关于我们ToolStripMenuItem});
+            this.帮助ToolStripMenuItem.Name = "帮助ToolStripMenuItem";
+            this.帮助ToolStripMenuItem.Size = new System.Drawing.Size(51, 24);
+            this.帮助ToolStripMenuItem.Text = "帮助";
+            // 
+            // 关于我们ToolStripMenuItem
+            // 
+            this.关于我们ToolStripMenuItem.Name = "关于我们ToolStripMenuItem";
+            this.关于我们ToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
+            this.关于我们ToolStripMenuItem.Text = "关于我们";
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(520, 434);
-            this.Controls.Add(this.btnChangePassword);
+            this.ClientSize = new System.Drawing.Size(1181, 550);
+            this.Controls.Add(this.statusStrip1);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.lblDisplay);
-            this.Controls.Add(this.cmbIsLocked);
-            this.Controls.Add(this.cmbIsDeleted);
-            this.Controls.Add(this.lblIsLocked);
-            this.Controls.Add(this.lblRealName);
-            this.Controls.Add(this.lblIsDeleted);
-            this.Controls.Add(this.lblPassword);
-            this.Controls.Add(this.lblUserName);
-            this.Controls.Add(this.lblId);
-            this.Controls.Add(this.txtRealName);
-            this.Controls.Add(this.txtPassword);
-            this.Controls.Add(this.txtUserName);
-            this.Controls.Add(this.txtId);
-            this.Controls.Add(this.btnLock);
-            this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.btnSearch);
+            this.IsMdiContainer = true;
+            this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormMain";
             this.Load += new System.EventHandler(this.FormMain_Load);
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnLock;
-        private System.Windows.Forms.TextBox txtId;
-        private System.Windows.Forms.TextBox txtUserName;
-        private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.TextBox txtRealName;
-        private System.Windows.Forms.Label lblId;
-        private System.Windows.Forms.Label lblUserName;
-        private System.Windows.Forms.Label lblPassword;
-        private System.Windows.Forms.Label lblIsDeleted;
-        private System.Windows.Forms.Label lblRealName;
-        private System.Windows.Forms.Label lblIsLocked;
-        private System.Windows.Forms.ComboBox cmbIsDeleted;
-        private System.Windows.Forms.ComboBox cmbIsLocked;
         private System.Windows.Forms.Label lblDisplay;
-        private System.Windows.Forms.Button btnChangePassword;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel tssInfo;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem 系统功能ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 修改密码ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 系统锁定ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 计算器ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem 切换账号ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 退出ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 基础数据维护ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 部门管理ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 字典管理ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 公司信息管理ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 操作员管理ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 日志查询ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 员工管理ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 员工管理ToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem 薪资管理ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 生成工资单ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 打印工资单ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 帮助ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 关于我们ToolStripMenuItem;
     }
 }

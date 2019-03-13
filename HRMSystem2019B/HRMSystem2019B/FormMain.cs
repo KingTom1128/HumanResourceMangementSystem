@@ -15,11 +15,6 @@ namespace HRMSystem2019B
     public partial class FormMain : Form
     {
 
-        string userid;
-        //string connStr = "Data Source = .; Initial Catalog = HRMDB; User ID = hrmtest; pwd = test";
-        //SqlConnection conn;
-        //SqlCommand comm;
-        //SqlDataReader dr;
         public FormMain()
         {
             InitializeComponent();
@@ -32,308 +27,42 @@ namespace HRMSystem2019B
             {
                 Application.Exit();
             }
-            userid = FormLogin.userid;
-            if (userid != "admin")
-            {
-                btnAdd.Enabled = false;
-                btnDelete.Enabled = false;
-                btnLock.Enabled = false;
-                btnSearch.Enabled = false;
-                txtId.Enabled = false;
-                txtPassword.Enabled = false;
-                txtRealName.Enabled = false;
-                txtUserName.Enabled = false;
-                cmbIsDeleted.Enabled = false;
-                cmbIsLocked.Enabled = false;
-            }
+            UserInfo ui = UserInfo.GetInstance();
+            tssInfo.Text = string.Format("欢迎'{0}'，登录时间:'{1}'", ui.RealName, DateTime.Now.ToString());
+
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void 操作员管理ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            bool IsDelete = false;
-            bool IsLocked = false;
-            if (cmbIsDeleted.Text == "Yes")
-            {
-                IsDelete = true;
-            }
-            if (cmbIsLocked.Text == "Yes")
-            {
-                IsLocked = true;
-            }
-            txtId.Text = Guid.NewGuid().ToString();
-            Guid guid = new Guid(txtId.Text);
-            Add ad = new Add(guid, txtUserName.Text, CommonHelper.GetMD5(txtPassword.Text.Trim()), IsDelete, txtRealName.Text, IsLocked);
-            bool f = ad.AddResult();
-            if (f == true)
-            {
-                CommonHelper.SuccessReply("添加成功！");
-            }
-            else
-            {
-                CommonHelper.FailedReply("添加失败！");
-            }
-            //bool IsDelete = false;
-            //bool IsLocked = false;
-            //if (cmbIsDeleted.Text == "Yes")
-            //{
-            //    IsDelete = true;
-            //}
-            //if (cmbIsLocked.Text == "Yes")
-            //{
-            //    IsLocked = true;
-            //}
-            //txtId.Text = Guid.NewGuid().ToString();
-            //conn = new SqlConnection(connStr);
-            //string sql = string.Format("insert into Operator(Id, UserName, Password, IsDeleted, RealName, IsLocked) values('{0}', '{1}', '{2}', '{3}', '{4}', '{5}')", txtId.Text, txtUserName.Text, txtPassword.Text, IsDelete, txtRealName.Text, IsLocked);
-            //conn.Open();
-            //comm = new SqlCommand(sql, conn);
-            //int n = comm.ExecuteNonQuery();
-            //if (n > 0)
-            //{
-            //    CommonHelper.SuccessReply("添加成功");
-            //    txtId.Text = "";
-            //    txtPassword.Text = "";
-            //    txtRealName.Text = "";
-            //    txtUserName.Text = "";
-            //    cmbIsDeleted.SelectedIndex = 0;
-            //    cmbIsLocked.SelectedIndex = 0;
-            //}
-            //conn.Close();
+            FormAdminOperate f1 = new FormAdminOperate();
+            f1.MdiParent = this;
+            f1.Show();
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            bool IsDeleted;
-            if (cmbIsDeleted.Text == "Yes")
-            {
-                IsDeleted = true;
-            }
-            else
-            {
-                IsDeleted = false;
-            }
-            string username = txtUserName.Text.Trim();
-            Delete de = new Delete(username, IsDeleted);
-            bool f = de.DeleteResult();
-            if (f == true)
-            {
-                CommonHelper.SuccessReply("操作成功！");
-            }
-            else
-            {
-                CommonHelper.FailedReply("操作失败！");
-            }
-            //bool IsDeleted = false;
-            //if (cmbIsDeleted.Text == "Yes")
-            //{
-            //    IsDeleted = true;
-            //}
-            //else
-            //{
-            //    IsDeleted = false;
-            //}
-            //conn = new SqlConnection(connStr);
-            //string sql = string.Format("update Operator set IsDeleted = '{0}' where UserName = '{1}'", IsDeleted, txtUserName.Text);
-            //conn.Open();
-            //comm = new SqlCommand(sql, conn);
-            //int n = comm.ExecuteNonQuery();
-            //if (n > 0)
-            //{
-            //    CommonHelper.SuccessReply("操作成功！");
-            //    txtUserName.Text = "";
-            //}
-            //else
-            //{
-            //    CommonHelper.SuccessReply("操作失败！");
-            //}
-            //conn.Close();
-        }
-
-        private void btnLock_Click(object sender, EventArgs e)
-        {
-            bool IsLocked;
-            if (cmbIsLocked.Text == "Yes")
-            {
-                IsLocked = true;
-            }
-            else
-            {
-                IsLocked = false;
-            }
-            string username = txtUserName.Text.Trim();
-            Lock lo = new Lock(username, IsLocked);
-            bool f = lo.LockResult();
-            if (f == true)
-            {
-                CommonHelper.SuccessReply("操作成功！");
-            }
-            else
-            {
-                CommonHelper.FailedReply("操作失败！");
-            }
-            //bool IsLocked = false;
-            //if (cmbIsLocked.Text == "Yes")
-            //{
-            //    IsLocked = true;
-            //}
-            //else
-            //{
-            //    IsLocked = false;
-            //}
-            //conn = new SqlConnection(connStr);
-            //string sql = string.Format("update Operator set IsLocked = '{0}' where UserName = '{1}'", IsLocked, txtUserName.Text);
-            //conn.Open();
-            //comm = new SqlCommand(sql, conn);
-            //int n = comm.ExecuteNonQuery();
-            //if (n > 0)
-            //{
-            //    CommonHelper.SuccessReply("操作成功！");
-            //    txtUserName.Text = "";
-            //}
-            //else
-            //{
-            //    CommonHelper.SuccessReply("操作失败！");
-            //}
-            //conn.Close();
-        }
-
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-            lblDisplay.Text = "";
-            string username = txtUserName.Text.Trim();
-            Search sea = new Search(username);
-            string seaResult = sea.SearchResult();
-            if (seaResult != null)
-            {
-                lblDisplay.Text = seaResult;
-                CommonHelper.SuccessReply("查找成功!");
-            }
-            else
-            {
-                CommonHelper.FailedReply(seaResult);
-            }
-            //lblDisplay.Text = "";
-            //conn = new SqlConnection(connStr);
-            //string sql = string.Format("select * from Operator where UserName = '{0}'", txtUserName.Text);
-            //conn.Open();
-            //comm = new SqlCommand(sql, conn);
-            //SqlDataReader dr = comm.ExecuteReader();
-            //while (dr.Read())
-            //{
-            //    lblDisplay.Text = "UserName:  " + dr["UserName"].ToString() + "\n" + "Password:  " + dr["Password"].ToString() + "\n" + "RealName:  " + dr["RealName"].ToString() + "\n"; 
-            //}
-            //if (lblDisplay.Text != "")
-            //{
-            //    CommonHelper.SuccessReply("查找成功！");
-            //}
-            //else
-            //{
-            //    CommonHelper.FailedReply("查找失败！");
-            //}
-            //dr.Close();
-            //conn.Close();
-        }
-
-        private void btnAdd_MouseEnter(object sender, EventArgs e)
-        {
-            lblId.Visible = true;
-            lblIsDeleted.Visible = true;
-            lblIsLocked.Visible = true;
-            lblPassword.Visible = true;
-            lblRealName.Visible = true;
-            lblUserName.Visible = true;
-            txtId.Visible = true;
-            cmbIsDeleted.Visible = true;
-            cmbIsLocked.Visible = true;
-            txtPassword.Visible = true;
-            txtRealName.Visible = true;
-            txtUserName.Visible = true;
-        }
-
-        private void btnSearch_MouseEnter(object sender, EventArgs e)
-        {
-            //全部可见，初始化
-            lblId.Visible = true;
-            lblIsDeleted.Visible = true;
-            lblIsLocked.Visible = true;
-            lblPassword.Visible = true;
-            lblRealName.Visible = true;
-            lblUserName.Visible = true;
-            txtId.Visible = true;
-            cmbIsDeleted.Visible = true;
-            cmbIsLocked.Visible = true;
-            txtPassword.Visible = true;
-            txtRealName.Visible = true;
-            txtUserName.Visible = true;
-            //根据需求隐藏
-            lblId.Visible = false;
-            lblIsDeleted.Visible = false;
-            lblIsLocked.Visible = false;
-            lblPassword.Visible = false;
-            lblRealName.Visible = false;
-            cmbIsDeleted.Visible = false;
-            cmbIsLocked.Visible = false;
-            txtId.Visible = false;
-            txtPassword.Visible = false;
-            txtRealName.Visible = false;
-            //txt
-        }
-
-        private void btnDelete_MouseEnter(object sender, EventArgs e)
-        {
-            //全部可见，初始化
-            lblId.Visible = true;
-            lblIsDeleted.Visible = true;
-            lblIsLocked.Visible = true;
-            lblPassword.Visible = true;
-            lblRealName.Visible = true;
-            lblUserName.Visible = true;
-            txtId.Visible = true;
-            cmbIsDeleted.Visible = true;
-            cmbIsLocked.Visible = true;
-            txtPassword.Visible = true;
-            txtRealName.Visible = true;
-            txtUserName.Visible = true;
-            //根据需求隐藏
-            lblId.Visible = false;
-            lblIsLocked.Visible = false;
-            lblPassword.Visible = false;
-            lblRealName.Visible = false;
-            txtId.Visible = false;
-            cmbIsLocked.Visible = false;
-            txtPassword.Visible = false;
-            txtRealName.Visible = false;
-        }
-
-        private void btnLock_MouseEnter(object sender, EventArgs e)
-        {
-            //全部可见，初始化
-            lblId.Visible = true;
-            lblIsDeleted.Visible = true;
-            lblIsLocked.Visible = true;
-            lblPassword.Visible = true;
-            lblRealName.Visible = true;
-            lblUserName.Visible = true;
-            txtId.Visible = true;
-            cmbIsDeleted.Visible = true;
-            cmbIsLocked.Visible = true;
-            txtPassword.Visible = true;
-            txtRealName.Visible = true;
-            txtUserName.Visible = true;
-            //根据需求隐藏
-            lblId.Visible = false;
-            lblIsDeleted.Visible = false;
-            lblPassword.Visible = false;
-            lblRealName.Visible = false;
-            txtId.Visible = false;
-            cmbIsDeleted.Visible = false;
-            txtPassword.Visible = false;
-            txtRealName.Visible = false;
-        }
-
-        private void btnChangePassword_Click(object sender, EventArgs e)
+        private void 修改密码ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormPasswordService f1 = new FormPasswordService();
+            f1.MdiParent = this;
+            f1.Show();
+        }
+
+        private void 退出ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void 切换账号ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormLogin f1 = new FormLogin();
+            f1.StartPosition = FormStartPosition.CenterParent;
+            f1.ShowDialog(); 
+        }
+
+        private void 日志查询ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormLogQuery f1 = new FormLogQuery();
+            f1.MdiParent = this;
             f1.Show();
         }
     }
