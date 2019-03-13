@@ -69,10 +69,10 @@
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tssInfo});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 525);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 552);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(1181, 25);
+            this.statusStrip1.Size = new System.Drawing.Size(1209, 25);
             this.statusStrip1.TabIndex = 20;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -94,7 +94,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1181, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1209, 28);
             this.menuStrip1.TabIndex = 21;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -164,32 +164,32 @@
             // 部门管理ToolStripMenuItem
             // 
             this.部门管理ToolStripMenuItem.Name = "部门管理ToolStripMenuItem";
-            this.部门管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.部门管理ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.部门管理ToolStripMenuItem.Text = "部门管理";
             // 
             // 字典管理ToolStripMenuItem
             // 
             this.字典管理ToolStripMenuItem.Name = "字典管理ToolStripMenuItem";
-            this.字典管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.字典管理ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.字典管理ToolStripMenuItem.Text = "字典管理";
             // 
             // 公司信息管理ToolStripMenuItem
             // 
             this.公司信息管理ToolStripMenuItem.Name = "公司信息管理ToolStripMenuItem";
-            this.公司信息管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.公司信息管理ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.公司信息管理ToolStripMenuItem.Text = "公司信息管理";
             // 
             // 操作员管理ToolStripMenuItem
             // 
             this.操作员管理ToolStripMenuItem.Name = "操作员管理ToolStripMenuItem";
-            this.操作员管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.操作员管理ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.操作员管理ToolStripMenuItem.Text = "操作员管理";
             this.操作员管理ToolStripMenuItem.Click += new System.EventHandler(this.操作员管理ToolStripMenuItem_Click);
             // 
             // 日志查询ToolStripMenuItem
             // 
             this.日志查询ToolStripMenuItem.Name = "日志查询ToolStripMenuItem";
-            this.日志查询ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.日志查询ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.日志查询ToolStripMenuItem.Text = "日志查询";
             this.日志查询ToolStripMenuItem.Click += new System.EventHandler(this.日志查询ToolStripMenuItem_Click);
             // 
@@ -204,7 +204,7 @@
             // 员工管理ToolStripMenuItem1
             // 
             this.员工管理ToolStripMenuItem1.Name = "员工管理ToolStripMenuItem1";
-            this.员工管理ToolStripMenuItem1.Size = new System.Drawing.Size(216, 26);
+            this.员工管理ToolStripMenuItem1.Size = new System.Drawing.Size(144, 26);
             this.员工管理ToolStripMenuItem1.Text = "员工管理";
             // 
             // 薪资管理ToolStripMenuItem
@@ -246,7 +246,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1181, 550);
+            this.ClientSize = new System.Drawing.Size(1209, 577);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.lblDisplay);

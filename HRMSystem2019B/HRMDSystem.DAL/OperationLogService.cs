@@ -56,9 +56,30 @@ namespace HRMDSystem.DAL
             DataTable dt = new DataTable();
             string connStr = ConfigurationManager.ConnectionStrings["connStr"].ConnectionString;
             SqlConnection conn = new SqlConnection(connStr);
-            string sql = "SELECT Temp.Id AS 编号,Operator.RealName AS 操作员, Temp.ActionDate AS操作时间, Temp.ActionDesc AS 描述 FROM(SELECT TOP (@LogNum) * FROM OperationLog WHEREId NOT IN (SELECT TOP (@BeforeNum) Id FROM OperationLog)) AS Temp, Operator WHERETemp.OperatorId = Operator.Id";
-
-
+            string sql = "SELECT Temp.Id AS 编号,Operator.RealName AS 操作员, Temp.ActionDate AS 操作时间, Temp.ActionDesc AS 描述 FROM(SELECT TOP (@LogNum) *FROM OperationLog WHERE Id NOT IN(SELECT TOP(@BeforeNum) Id FROM OperationLog)) AS Temp, Operator WHERE Temp.OperatorId = Operator.Id";
+            SqlCommand comm = new SqlCommand(sql, conn);
+            comm.Parameters.Add(new SqlParameter("@LogNum", pageNo));
+            comm.Parameters.Add(new SqlParameter("@BeforeNum", numPerPage));
+            conn.Open();
+            SqlDataReader sda = comm.ExecuteReader();
+            for (int num = 0; num < sda.FieldCount; num++)
+            {
+                DataColumn column = new DataColumn();
+                column.DataType = sda.GetFieldType(num);
+                column.ColumnName = sda.GetName(num);
+                dt.Columns.Add(column);
+            }
+            while (sda.Read())
+            {
+                DataRow dr = dt.NewRow();
+                for (int num = 0; num < sda.FieldCount; num++)
+                {
+                    dr[num] = sda[num].ToString();
+                }
+                dt.Rows.Add(dr);
+            }
+            sda.Close();
+            conn.Close();
             return dt;
         }
     }

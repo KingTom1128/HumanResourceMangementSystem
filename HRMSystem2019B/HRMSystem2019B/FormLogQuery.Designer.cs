@@ -55,10 +55,11 @@
             this.btnHome.ForeColor = System.Drawing.Color.Blue;
             this.btnHome.Location = new System.Drawing.Point(419, 389);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(75, 23);
+            this.btnHome.Size = new System.Drawing.Size(75, 35);
             this.btnHome.TabIndex = 1;
             this.btnHome.Text = "首页";
             this.btnHome.UseVisualStyleBackColor = true;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // btnEnd
             // 
@@ -68,10 +69,11 @@
             this.btnEnd.ForeColor = System.Drawing.Color.Blue;
             this.btnEnd.Location = new System.Drawing.Point(500, 389);
             this.btnEnd.Name = "btnEnd";
-            this.btnEnd.Size = new System.Drawing.Size(75, 23);
+            this.btnEnd.Size = new System.Drawing.Size(75, 35);
             this.btnEnd.TabIndex = 2;
             this.btnEnd.Text = "末页";
             this.btnEnd.UseVisualStyleBackColor = true;
+            this.btnEnd.Click += new System.EventHandler(this.btnEnd_Click);
             // 
             // btnNext
             // 
@@ -81,10 +83,11 @@
             this.btnNext.ForeColor = System.Drawing.Color.Blue;
             this.btnNext.Location = new System.Drawing.Point(581, 389);
             this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(75, 23);
+            this.btnNext.Size = new System.Drawing.Size(75, 35);
             this.btnNext.TabIndex = 3;
             this.btnNext.Text = "下一页";
             this.btnNext.UseVisualStyleBackColor = true;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
             // btnLast
             // 
@@ -94,10 +97,11 @@
             this.btnLast.ForeColor = System.Drawing.Color.Blue;
             this.btnLast.Location = new System.Drawing.Point(662, 389);
             this.btnLast.Name = "btnLast";
-            this.btnLast.Size = new System.Drawing.Size(75, 23);
+            this.btnLast.Size = new System.Drawing.Size(75, 35);
             this.btnLast.TabIndex = 4;
             this.btnLast.Text = "上一页";
             this.btnLast.UseVisualStyleBackColor = true;
+            this.btnLast.Click += new System.EventHandler(this.btnLast_Click);
             // 
             // lblAll
             // 
@@ -119,7 +123,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 459);
             this.Controls.Add(this.lblNow);
             this.Controls.Add(this.lblAll);
             this.Controls.Add(this.btnLast);
@@ -128,7 +132,7 @@
             this.Controls.Add(this.btnHome);
             this.Controls.Add(this.DataGridView);
             this.Name = "FormLogQuery";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormLog";
             this.Load += new System.EventHandler(this.FormLog_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView)).EndInit();
