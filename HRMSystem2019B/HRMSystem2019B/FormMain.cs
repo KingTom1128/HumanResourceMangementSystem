@@ -56,7 +56,7 @@ namespace HRMSystem2019B
             this.Hide();
             FormLogin f1 = new FormLogin();
             f1.StartPosition = FormStartPosition.CenterParent;
-            f1.ShowDialog(); 
+            f1.ShowDialog();
         }
 
         private void 日志查询ToolStripMenuItem_Click(object sender, EventArgs e)

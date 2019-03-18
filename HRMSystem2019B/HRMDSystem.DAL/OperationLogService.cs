@@ -19,24 +19,14 @@ namespace HRMDSystem.DAL
 
         public bool Add(OperationLog log)
         {
-            string connStr = ConfigurationManager.ConnectionStrings["connStr"].ConnectionString;
-            SqlConnection conn = new SqlConnection(connStr);
             string sql = "insert into OperationLog values(newid(), @OperatorId, @ActionDate, @ActionDesc)";
-            SqlCommand comm = new SqlCommand(sql, conn);
-            comm.Parameters.Add(new SqlParameter("@OperatorId", log.OperatorId));
-            comm.Parameters.Add(new SqlParameter("@ActionDate", log.ActionDate));
-            comm.Parameters.Add(new SqlParameter("@ActionDesc", log.ActionDesc));
-
-            conn.Open();
-            int n = comm.ExecuteNonQuery();
-            if(n > 0)
+            SqlParameter[] paras =
             {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+                new SqlParameter("@OperatorId", log.OperatorId),
+                new SqlParameter("@ActionDate", log.ActionDate),
+                new SqlParameter("@ActionDesc", log.ActionDesc)
+            };
+            return SqlHelper.ExcuteNonQuery(sql, paras) > 0;
         }
 
         public int GetLogCount()
@@ -56,10 +46,10 @@ namespace HRMDSystem.DAL
             DataTable dt = new DataTable();
             string connStr = ConfigurationManager.ConnectionStrings["connStr"].ConnectionString;
             SqlConnection conn = new SqlConnection(connStr);
-            string sql = "SELECT Temp.Id AS 编号,Operator.RealName AS 操作员, Temp.ActionDate AS 操作时间, Temp.ActionDesc AS 描述 FROM(SELECT TOP (@LogNum) *FROM OperationLog WHERE Id NOT IN(SELECT TOP(@BeforeNum) Id FROM OperationLog)) AS Temp, Operator WHERE Temp.OperatorId = Operator.Id";
+            string sql = "SELECT Temp.Id AS 编号,Operator.RealName AS 操作员, Temp.ActionDate AS 操作时间, Temp.ActionDesc AS 描述 FROM(SELECT TOP (@LogNum) * FROM OperationLog WHERE Id NOT IN(SELECT TOP(@BeforeNum) Id FROM OperationLog)) AS Temp, Operator WHERE Temp.OperatorId = Operator.Id";
             SqlCommand comm = new SqlCommand(sql, conn);
-            comm.Parameters.Add(new SqlParameter("@LogNum", pageNo));
-            comm.Parameters.Add(new SqlParameter("@BeforeNum", numPerPage));
+            comm.Parameters.Add(new SqlParameter("@LogNum", numPerPage));
+            comm.Parameters.Add(new SqlParameter("@BeforeNum", (pageNo - 1) * 10 + 1));
             conn.Open();
             SqlDataReader sda = comm.ExecuteReader();
             for (int num = 0; num < sda.FieldCount; num++)

@@ -21,13 +21,6 @@ namespace HRMSystem2019B
         public int totalPages;
         OperationLogService logServ = new OperationLogService();
 
-        public void Show(int pageNo)
-        {
-
-        }
-
-
-
         public FormLogQuery()
         {
             InitializeComponent();
@@ -36,13 +29,31 @@ namespace HRMSystem2019B
         private void FormLog_Load(object sender, EventArgs e)
         {
             currentPageNo = 1;
-            DataGridView.DataSource = logServ.GetLogList(10, currentPageNo + 9 * (currentPageNo -1));
-            totalPages = logServ.GetLogCount() / 10 + 1;
+            DataGridView.DataSource = logServ.GetLogList(currentPageNo, NUM_PER_PAGE);
+            totalPages = logServ.GetLogCount() / NUM_PER_PAGE + 1;
             lblAll.Text = "共" + totalPages + "页";
             lblNow.Text = "第" + currentPageNo + "页";
         }
 
-        private void btnNext_Click(object sender, EventArgs e)
+        private void lblHome_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            currentPageNo = 1;
+            DataGridView.DataSource = logServ.GetLogList(currentPageNo, NUM_PER_PAGE);
+            totalPages = logServ.GetLogCount() / NUM_PER_PAGE + 1;
+            lblAll.Text = "共" + totalPages + "页";
+            lblNow.Text = "第" + currentPageNo + "页";
+        }
+
+        private void lblEnd_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            currentPageNo = totalPages;
+            DataGridView.DataSource = logServ.GetLogList(currentPageNo, NUM_PER_PAGE);
+            totalPages = logServ.GetLogCount() / NUM_PER_PAGE + 1;
+            lblAll.Text = "共" + totalPages + "页";
+            lblNow.Text = "第" + currentPageNo + "页";
+        }
+
+        private void lblNext_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             if (currentPageNo == totalPages)
             {
@@ -52,42 +63,24 @@ namespace HRMSystem2019B
             {
                 currentPageNo++;
             }
-            DataGridView.DataSource = logServ.GetLogList(10, currentPageNo + 9 * (currentPageNo - 1));
-            totalPages = logServ.GetLogCount() / 10 + 1;
+            DataGridView.DataSource = logServ.GetLogList(currentPageNo, NUM_PER_PAGE);
+            totalPages = logServ.GetLogCount() / NUM_PER_PAGE + 1;
             lblAll.Text = "共" + totalPages + "页";
             lblNow.Text = "第" + currentPageNo + "页";
         }
 
-        private void btnLast_Click(object sender, EventArgs e)
+        private void lblLast_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            if (currentPageNo == 1 )
+            if (currentPageNo == 1)
             {
                 currentPageNo = totalPages;
             }
             else
             {
-                currentPageNo --;
+                currentPageNo--;
             }
-            DataGridView.DataSource = logServ.GetLogList(10, currentPageNo + 9 * (currentPageNo - 1));
-            totalPages = logServ.GetLogCount() / 10 + 1;
-            lblAll.Text = "共" + totalPages + "页";
-            lblNow.Text = "第" + currentPageNo + "页";
-        }
-
-        private void btnHome_Click(object sender, EventArgs e)
-        {
-            currentPageNo = 1;
-            DataGridView.DataSource = logServ.GetLogList(10, currentPageNo + 9 * (currentPageNo - 1));
-            totalPages = logServ.GetLogCount() / 10 + 1;
-            lblAll.Text = "共" + totalPages + "页";
-            lblNow.Text = "第" + currentPageNo + "页";
-        }
-
-        private void btnEnd_Click(object sender, EventArgs e)
-        {
-            currentPageNo = totalPages;
-            DataGridView.DataSource = logServ.GetLogList(10, currentPageNo + 9 * (currentPageNo - 1));
-            totalPages = logServ.GetLogCount() / 10 + 1;
+            DataGridView.DataSource = logServ.GetLogList(currentPageNo, NUM_PER_PAGE);
+            totalPages = logServ.GetLogCount() / NUM_PER_PAGE + 1;
             lblAll.Text = "共" + totalPages + "页";
             lblNow.Text = "第" + currentPageNo + "页";
         }

@@ -86,3 +86,5 @@ D:\dotNetProjects\BData\HRMSystem2019B\HRMSystem2019B\bin\Debug\HRMDSystem.DAL.p
 D:\dotNetProjects\BData\HRMSystem2019B\HRMSystem2019B\obj\Debug\HRMSystem2019B.FormPasswordService.resources
 D:\Study\软件项目实训\HumanResourceMangementSystem\HRMSystem2019B\HRMSystem2019B\obj\Debug\HRMSystem2019B.FormAdminOperate.resources
 D:\Study\软件项目实训\HumanResourceMangementSystem\HRMSystem2019B\HRMSystem2019B\obj\Debug\HRMSystem2019B.FormLogQuery.resources
+D:\dotNetProjects\BData\HRMSystem2019B\HRMSystem2019B\obj\Debug\HRMSystem2019B.FormAdminOperate.resources
+D:\dotNetProjects\BData\HRMSystem2019B\HRMSystem2019B\obj\Debug\HRMSystem2019B.FormLogQuery.resources
