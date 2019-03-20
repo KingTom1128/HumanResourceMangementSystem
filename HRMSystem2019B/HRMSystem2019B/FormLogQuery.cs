@@ -1,4 +1,5 @@
-﻿using HRMDSystem.DAL;
+﻿using HRMDSystem.BLL;
+using HRMDSystem.DAL;
 using HRMSystem.Model;
 using System;
 using System.Collections.Generic;
@@ -29,7 +30,9 @@ namespace HRMSystem2019B
         private void FormLog_Load(object sender, EventArgs e)
         {
             currentPageNo = 1;
-            DataGridView.DataSource = logServ.GetLogList(currentPageNo, NUM_PER_PAGE);
+            Show s = new Show();
+            DataGridView.DataSource = s.ShowResult(currentPageNo, NUM_PER_PAGE);
+            //DataGridView.DataSource = logServ.GetLogList(currentPageNo, NUM_PER_PAGE);
             totalPages = logServ.GetLogCount() / NUM_PER_PAGE + 1;
             lblAll.Text = "共" + totalPages + "页";
             lblNow.Text = "第" + currentPageNo + "页";
@@ -38,7 +41,9 @@ namespace HRMSystem2019B
         private void lblHome_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             currentPageNo = 1;
-            DataGridView.DataSource = logServ.GetLogList(currentPageNo, NUM_PER_PAGE);
+            Show s = new Show();
+            DataGridView.DataSource = s.ShowResult(currentPageNo, NUM_PER_PAGE);
+            //DataGridView.DataSource = logServ.GetLogList(currentPageNo, NUM_PER_PAGE);
             totalPages = logServ.GetLogCount() / NUM_PER_PAGE + 1;
             lblAll.Text = "共" + totalPages + "页";
             lblNow.Text = "第" + currentPageNo + "页";
@@ -47,7 +52,9 @@ namespace HRMSystem2019B
         private void lblEnd_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             currentPageNo = totalPages;
-            DataGridView.DataSource = logServ.GetLogList(currentPageNo, NUM_PER_PAGE);
+            Show s = new Show();
+            DataGridView.DataSource = s.ShowResult(currentPageNo, NUM_PER_PAGE);
+            //DataGridView.DataSource = logServ.GetLogList(currentPageNo, NUM_PER_PAGE);
             totalPages = logServ.GetLogCount() / NUM_PER_PAGE + 1;
             lblAll.Text = "共" + totalPages + "页";
             lblNow.Text = "第" + currentPageNo + "页";
@@ -63,7 +70,9 @@ namespace HRMSystem2019B
             {
                 currentPageNo++;
             }
-            DataGridView.DataSource = logServ.GetLogList(currentPageNo, NUM_PER_PAGE);
+            Show s = new Show();
+            DataGridView.DataSource = s.ShowResult(currentPageNo, NUM_PER_PAGE);
+            //DataGridView.DataSource = logServ.GetLogList(currentPageNo, NUM_PER_PAGE);
             totalPages = logServ.GetLogCount() / NUM_PER_PAGE + 1;
             lblAll.Text = "共" + totalPages + "页";
             lblNow.Text = "第" + currentPageNo + "页";
@@ -79,7 +88,9 @@ namespace HRMSystem2019B
             {
                 currentPageNo--;
             }
-            DataGridView.DataSource = logServ.GetLogList(currentPageNo, NUM_PER_PAGE);
+            Show s = new Show();
+            DataGridView.DataSource = s.ShowResult(currentPageNo, NUM_PER_PAGE);
+            //DataGridView.DataSource = logServ.GetLogList(currentPageNo, NUM_PER_PAGE);
             totalPages = logServ.GetLogCount() / NUM_PER_PAGE + 1;
             lblAll.Text = "共" + totalPages + "页";
             lblNow.Text = "第" + currentPageNo + "页";
