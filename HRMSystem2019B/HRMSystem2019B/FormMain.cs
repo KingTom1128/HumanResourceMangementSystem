@@ -65,5 +65,19 @@ namespace HRMSystem2019B
             f1.MdiParent = this;
             f1.Show();
         }
+
+        private void 员工管理ToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FormEmployeeList f1 = new FormEmployeeList();
+            f1.MdiParent = this;
+            f1.Show();
+        }
+
+        private void 部门管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormDepartment f1 = new FormDepartment();
+            f1.MdiParent = this;
+            f1.Show();
+        }
     }
 }

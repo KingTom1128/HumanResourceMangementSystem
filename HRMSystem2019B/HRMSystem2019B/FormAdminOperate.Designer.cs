@@ -238,6 +238,7 @@
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnSearch);
             this.Name = "FormAdminOperate";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormAdminOperate";
             this.Load += new System.EventHandler(this.FormAdminOperate_Load);
             this.ResumeLayout(false);

@@ -9,6 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static HRMDSystem.BLL.Administrator;
+using static HRMDSystem.BLL.Administrator.Update;
 
 namespace HRMSystem2019B
 {

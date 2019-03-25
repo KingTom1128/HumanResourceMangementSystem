@@ -69,7 +69,7 @@
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tssInfo});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 552);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 553);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
             this.statusStrip1.Size = new System.Drawing.Size(1209, 25);
@@ -164,32 +164,33 @@
             // 部门管理ToolStripMenuItem
             // 
             this.部门管理ToolStripMenuItem.Name = "部门管理ToolStripMenuItem";
-            this.部门管理ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
+            this.部门管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.部门管理ToolStripMenuItem.Text = "部门管理";
+            this.部门管理ToolStripMenuItem.Click += new System.EventHandler(this.部门管理ToolStripMenuItem_Click);
             // 
             // 字典管理ToolStripMenuItem
             // 
             this.字典管理ToolStripMenuItem.Name = "字典管理ToolStripMenuItem";
-            this.字典管理ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
+            this.字典管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.字典管理ToolStripMenuItem.Text = "字典管理";
             // 
             // 公司信息管理ToolStripMenuItem
             // 
             this.公司信息管理ToolStripMenuItem.Name = "公司信息管理ToolStripMenuItem";
-            this.公司信息管理ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
+            this.公司信息管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.公司信息管理ToolStripMenuItem.Text = "公司信息管理";
             // 
             // 操作员管理ToolStripMenuItem
             // 
             this.操作员管理ToolStripMenuItem.Name = "操作员管理ToolStripMenuItem";
-            this.操作员管理ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
+            this.操作员管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.操作员管理ToolStripMenuItem.Text = "操作员管理";
             this.操作员管理ToolStripMenuItem.Click += new System.EventHandler(this.操作员管理ToolStripMenuItem_Click);
             // 
             // 日志查询ToolStripMenuItem
             // 
             this.日志查询ToolStripMenuItem.Name = "日志查询ToolStripMenuItem";
-            this.日志查询ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
+            this.日志查询ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.日志查询ToolStripMenuItem.Text = "日志查询";
             this.日志查询ToolStripMenuItem.Click += new System.EventHandler(this.日志查询ToolStripMenuItem_Click);
             // 
@@ -206,6 +207,7 @@
             this.员工管理ToolStripMenuItem1.Name = "员工管理ToolStripMenuItem1";
             this.员工管理ToolStripMenuItem1.Size = new System.Drawing.Size(144, 26);
             this.员工管理ToolStripMenuItem1.Text = "员工管理";
+            this.员工管理ToolStripMenuItem1.Click += new System.EventHandler(this.员工管理ToolStripMenuItem1_Click);
             // 
             // 薪资管理ToolStripMenuItem
             // 
@@ -246,13 +248,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1209, 577);
+            this.ClientSize = new System.Drawing.Size(1209, 578);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.lblDisplay);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormMain";

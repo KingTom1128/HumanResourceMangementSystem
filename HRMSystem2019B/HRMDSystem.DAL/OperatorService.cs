@@ -11,25 +11,6 @@ namespace HRMDSystem.DAL
 {
     public class OperatorService
     {
-        //登陆
-        public Operator GetOperator(string username)
-        {
-            Operator op = null;
-            string sql = "select * from Operator where UserName = @UserName";
-            SqlParameter paraUserName = new SqlParameter("@UserName", username);
-            using(SqlDataReader sdr = SqlHelper.GetDataReader(sql, paraUserName))
-                if (sdr.Read())
-                {
-                    op = new Operator();
-                    op.Id = (Guid)sdr["Id"];
-                    op.UserName = sdr["UserName"].ToString();
-                    op.Password = sdr["Password"].ToString();
-                    op.IsDeleted = (bool)sdr["IsDeleted"];
-                    op.RealName = sdr["RealName"].ToString();
-                    op.IsLocked = (bool)sdr["IsLocked"];
-                }
-            return op;
-        }
         //查询
         public string Search(string username)
         {
@@ -94,6 +75,26 @@ namespace HRMDSystem.DAL
                 new SqlParameter("@Password", newpwd),
             };
             return SqlHelper.ExcuteNonQuery(sql, paras) > 0;
+        }
+
+        //登陆
+        public Operator GetOperator(string username)
+        {
+            Operator op = null;
+            string sql = "select * from Operator where UserName = @UserName";
+            SqlParameter paraUserName = new SqlParameter("@UserName", username);
+            using (SqlDataReader sdr = SqlHelper.GetDataReader(sql, paraUserName))
+                if (sdr.Read())
+                {
+                    op = new Operator();
+                    op.Id = (Guid)sdr["Id"];
+                    op.UserName = sdr["UserName"].ToString();
+                    op.Password = sdr["Password"].ToString();
+                    op.IsDeleted = (bool)sdr["IsDeleted"];
+                    op.RealName = sdr["RealName"].ToString();
+                    op.IsLocked = (bool)sdr["IsLocked"];
+                }
+            return op;
         }
     }
 }
