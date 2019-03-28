@@ -11,11 +11,23 @@ namespace HRMDSystem.DAL
 {
     public class DepartmentService
     {
+        //显示
+        public string Display()
+        {
+            string s = "";
+            string sql = "select Name from Department";
+            using (SqlDataReader sdr = SqlHelper.GetDataReader(sql))
+                while(sdr.Read())
+                {
+                    s = s + sdr["Name"].ToString() + "    ";
+                }
+            return s;
+        }
         //查询
         public string Search(string name)
         {
             string s = "";
-            string sql = "select * from Department where Name = @Name";
+            string sql = "select * from Department where Name like @Name";
             SqlParameter paraName = new SqlParameter("@Name", name);
             using (SqlDataReader sdr = SqlHelper.GetDataReader(sql, paraName))
                 if (sdr.Read())

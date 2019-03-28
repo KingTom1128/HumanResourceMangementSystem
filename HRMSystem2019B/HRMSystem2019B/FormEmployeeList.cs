@@ -36,7 +36,7 @@ namespace HRMSystem2019B
             string sql = "select Employee.Id as 编号, Number as 工号, Employee.Name as 姓名, InDay as 入职时间, Nation as 民族, NativePlace as 籍贯 from Employee, Department where Department.Id = Employee.DepartmentId";
             if(chbName.Checked)
             {
-                sql += " and Employee.Name = @Name";
+                sql += " and Employee.Name like '%' + @Name + '%'";
             }
             if (chbDepartment.Checked)
             {

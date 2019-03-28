@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HRMDSystem.DAL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -54,19 +55,28 @@ namespace HRMSystem2019B
         private void btnSearch_Click(object sender, EventArgs e)
         {
             lblShow.Text = "";
-            string name = txtSearch.Text.Trim();
-            Search sea = new Search(name);
-            string seaResult = sea.SearchResult();
-            if (seaResult != null)
+            if(txtSearch.Text != "")
             {
-                lblShow.Text = seaResult;
-                CommonHelper.SuccessReply("查找成功!");
+                string name = txtSearch.Text.Trim();
+                Search sea = new Search(name);
+                string seaResult = sea.SearchResult();
+                if (seaResult != null)
+                {
+                    lblShow.Text = seaResult;
+                    CommonHelper.SuccessReply("查找成功!");
+                }
+                else
+                {
+                    CommonHelper.FailedReply(seaResult);
+                }
+                txtSearch.Text = "";
             }
             else
             {
-                CommonHelper.FailedReply(seaResult);
+                DepartmentService dtServ = new DepartmentService();
+                string display = dtServ.Display();
+                lblShow.Text = display;
             }
-            txtSearch.Text = "";
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
