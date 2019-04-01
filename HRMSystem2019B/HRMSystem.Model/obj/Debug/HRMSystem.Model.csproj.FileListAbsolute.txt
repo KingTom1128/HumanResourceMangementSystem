@@ -9,3 +9,8 @@ D:\Study\软件项目实训\HumanResourceMangementSystem\HRMSystem2019B\HRMSyste
 D:\Study\软件项目实训\HumanResourceMangementSystem\HRMSystem2019B\HRMSystem.Model\obj\Debug\HRMSystem.Model.csproj.CoreCompileInputs.cache
 D:\Study\软件项目实训\HumanResourceMangementSystem\HRMSystem2019B\HRMSystem.Model\obj\Debug\HRMSystem.Model.dll
 D:\Study\软件项目实训\HumanResourceMangementSystem\HRMSystem2019B\HRMSystem.Model\obj\Debug\HRMSystem.Model.pdb
+C:\Users\Administrator\Desktop\HumanResourceMangementSystem\HRMSystem2019B\HRMSystem.Model\bin\Debug\HRMSystem.Model.dll
+C:\Users\Administrator\Desktop\HumanResourceMangementSystem\HRMSystem2019B\HRMSystem.Model\bin\Debug\HRMSystem.Model.pdb
+C:\Users\Administrator\Desktop\HumanResourceMangementSystem\HRMSystem2019B\HRMSystem.Model\obj\Debug\HRMSystem.Model.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\HumanResourceMangementSystem\HRMSystem2019B\HRMSystem.Model\obj\Debug\HRMSystem.Model.dll
+C:\Users\Administrator\Desktop\HumanResourceMangementSystem\HRMSystem2019B\HRMSystem.Model\obj\Debug\HRMSystem.Model.pdb

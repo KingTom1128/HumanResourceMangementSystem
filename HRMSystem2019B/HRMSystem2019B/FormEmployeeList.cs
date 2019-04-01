@@ -56,5 +56,58 @@ namespace HRMSystem2019B
             DataGridView.DataSource = es.GetSearch(sql, paras);
         }
 
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            FormEmployeeUI feu = new FormEmployeeUI();
+            DialogResult dr = feu.ShowDialog();
+            if (dr == DialogResult.OK)
+            {
+                this.FormEmployeeList_Load(null, null);
+            }
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            if(DataGridView.SelectedRows.Count > 0)
+            {
+                string strId = DataGridView.SelectedRows[0].Cells[0].Value.ToString();
+                if(string.IsNullOrEmpty(strId))
+                {
+                    CommonHelper.FailedReply("请选择一个正确的行！");
+                }
+                else
+                {
+                    Guid id = Guid.Parse(strId);
+                    FormEmployeeUI fe = new FormEmployeeUI(id);
+                    if(fe.ShowDialog() == DialogResult.OK)
+                    {
+                        this.FormEmployeeList_Load(null, null);
+                    }
+                }
+            }
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            if (DataGridView.SelectedRows.Count > 0)
+            {
+                string strId = DataGridView.SelectedRows[0].Cells[0].Value.ToString();
+                if (string.IsNullOrEmpty(strId))
+                {
+                    CommonHelper.FailedReply("请选择一个正确的行！");
+                }
+                else
+                {
+                    DialogResult dr = MessageBox.Show("您确认删除吗?", "警告", MessageBoxButtons.OKCancel); ;
+                    
+                    if(dr == DialogResult.OK)
+                    {
+                        CommonHelper.FailedReply(es.DeleteEmployee(strId));
+                    }
+
+                    this.FormEmployeeList_Load(null, null);
+                }
+            }
+        }
     }
 }

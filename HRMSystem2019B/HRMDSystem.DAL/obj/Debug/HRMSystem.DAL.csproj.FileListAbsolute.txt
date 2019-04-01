@@ -22,3 +22,11 @@ D:\dotNetProjects\BData\HRMSystem2019B\HRMDSystem.DAL\bin\Debug\HRMSystem.Model.
 D:\dotNetProjects\BData\HRMSystem2019B\HRMDSystem.DAL\obj\Debug\HRMSystem.DAL.csprojResolveAssemblyReference.cache
 D:\dotNetProjects\BData\HRMSystem2019B\HRMDSystem.DAL\obj\Debug\HRMDSystem.DAL.dll
 D:\dotNetProjects\BData\HRMSystem2019B\HRMDSystem.DAL\obj\Debug\HRMDSystem.DAL.pdb
+C:\Users\Administrator\Desktop\HumanResourceMangementSystem\HRMSystem2019B\HRMDSystem.DAL\bin\Debug\HRMDSystem.DAL.dll
+C:\Users\Administrator\Desktop\HumanResourceMangementSystem\HRMSystem2019B\HRMDSystem.DAL\bin\Debug\HRMDSystem.DAL.pdb
+C:\Users\Administrator\Desktop\HumanResourceMangementSystem\HRMSystem2019B\HRMDSystem.DAL\bin\Debug\HRMSystem.Model.dll
+C:\Users\Administrator\Desktop\HumanResourceMangementSystem\HRMSystem2019B\HRMDSystem.DAL\bin\Debug\HRMSystem.Model.pdb
+C:\Users\Administrator\Desktop\HumanResourceMangementSystem\HRMSystem2019B\HRMDSystem.DAL\obj\Debug\HRMSystem.DAL.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\HumanResourceMangementSystem\HRMSystem2019B\HRMDSystem.DAL\obj\Debug\HRMDSystem.DAL.dll
+C:\Users\Administrator\Desktop\HumanResourceMangementSystem\HRMSystem2019B\HRMDSystem.DAL\obj\Debug\HRMDSystem.DAL.pdb
+D:\Study\软件项目实训\HumanResourceMangementSystem\HRMSystem2019B\HRMDSystem.DAL\bin\Debug\NPOI.dll
