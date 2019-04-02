@@ -53,7 +53,7 @@
             // 
             this.DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DataGridView.Location = new System.Drawing.Point(28, 201);
-            this.DataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.DataGridView.Name = "DataGridView";
             this.DataGridView.RowTemplate.Height = 23;
             this.DataGridView.Size = new System.Drawing.Size(981, 205);
@@ -71,9 +71,9 @@
             this.grbSearch.Controls.Add(this.chbDepartment);
             this.grbSearch.Controls.Add(this.chbName);
             this.grbSearch.Location = new System.Drawing.Point(28, 71);
-            this.grbSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grbSearch.Margin = new System.Windows.Forms.Padding(4);
             this.grbSearch.Name = "grbSearch";
-            this.grbSearch.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grbSearch.Padding = new System.Windows.Forms.Padding(4);
             this.grbSearch.Size = new System.Drawing.Size(980, 105);
             this.grbSearch.TabIndex = 1;
             this.grbSearch.TabStop = false;
@@ -82,7 +82,7 @@
             // btnSearch
             // 
             this.btnSearch.Location = new System.Drawing.Point(384, 62);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(177, 29);
             this.btnSearch.TabIndex = 8;
@@ -103,7 +103,7 @@
             // TimeOut
             // 
             this.TimeOut.Location = new System.Drawing.Point(731, 21);
-            this.TimeOut.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TimeOut.Margin = new System.Windows.Forms.Padding(4);
             this.TimeOut.Name = "TimeOut";
             this.TimeOut.Size = new System.Drawing.Size(168, 25);
             this.TimeOut.TabIndex = 6;
@@ -111,7 +111,7 @@
             // TimeIn
             // 
             this.TimeIn.Location = new System.Drawing.Point(523, 21);
-            this.TimeIn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TimeIn.Margin = new System.Windows.Forms.Padding(4);
             this.TimeIn.Name = "TimeIn";
             this.TimeIn.Size = new System.Drawing.Size(168, 25);
             this.TimeIn.TabIndex = 5;
@@ -121,7 +121,7 @@
             this.cmbDepartment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDepartment.FormattingEnabled = true;
             this.cmbDepartment.Location = new System.Drawing.Point(113, 62);
-            this.cmbDepartment.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbDepartment.Margin = new System.Windows.Forms.Padding(4);
             this.cmbDepartment.Name = "cmbDepartment";
             this.cmbDepartment.Size = new System.Drawing.Size(160, 23);
             this.cmbDepartment.TabIndex = 4;
@@ -129,7 +129,7 @@
             // txtName
             // 
             this.txtName.Location = new System.Drawing.Point(113, 22);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(160, 25);
             this.txtName.TabIndex = 3;
@@ -138,7 +138,7 @@
             // 
             this.chbTime.AutoSize = true;
             this.chbTime.Location = new System.Drawing.Point(384, 25);
-            this.chbTime.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chbTime.Margin = new System.Windows.Forms.Padding(4);
             this.chbTime.Name = "chbTime";
             this.chbTime.Size = new System.Drawing.Size(89, 19);
             this.chbTime.TabIndex = 2;
@@ -149,7 +149,7 @@
             // 
             this.chbDepartment.AutoSize = true;
             this.chbDepartment.Location = new System.Drawing.Point(28, 65);
-            this.chbDepartment.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chbDepartment.Margin = new System.Windows.Forms.Padding(4);
             this.chbDepartment.Name = "chbDepartment";
             this.chbDepartment.Size = new System.Drawing.Size(59, 19);
             this.chbDepartment.TabIndex = 1;
@@ -160,7 +160,7 @@
             // 
             this.chbName.AutoSize = true;
             this.chbName.Location = new System.Drawing.Point(28, 25);
-            this.chbName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chbName.Margin = new System.Windows.Forms.Padding(4);
             this.chbName.Name = "chbName";
             this.chbName.Size = new System.Drawing.Size(59, 19);
             this.chbName.TabIndex = 0;
@@ -219,6 +219,7 @@
             this.toolStripButton4.Name = "toolStripButton4";
             this.toolStripButton4.Size = new System.Drawing.Size(24, 24);
             this.toolStripButton4.Text = "toolStripButton4";
+            this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
             // 
             // FormEmployeeList
             // 
@@ -228,7 +229,7 @@
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.grbSearch);
             this.Controls.Add(this.DataGridView);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormEmployeeList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormEmployeeList";

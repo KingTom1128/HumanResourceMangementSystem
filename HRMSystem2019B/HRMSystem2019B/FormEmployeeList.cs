@@ -1,11 +1,15 @@
 ﻿using HRMDSystem.BLL;
 using HRMDSystem.DAL;
+using NPOI.SS.UserModel;
+using NPOI.HSSF.UserModel;
+using NPOI.XSSF.UserModel;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -108,6 +112,12 @@ namespace HRMSystem2019B
                     this.FormEmployeeList_Load(null, null);
                 }
             }
+        }
+
+        private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+            ExportExcel ee = new ExportExcel();
+            ee.Export("Demo", DataGridView);
         }
     }
 }
