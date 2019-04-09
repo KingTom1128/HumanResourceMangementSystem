@@ -79,5 +79,12 @@ namespace HRMSystem2019B
             f1.MdiParent = this;
             f1.Show();
         }
+
+        private void 生成工资单ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormSalary f1 = new FormSalary();
+            f1.MdiParent = this;
+            f1.Show();
+        }
     }
 }

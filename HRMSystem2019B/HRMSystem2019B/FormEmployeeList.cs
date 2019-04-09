@@ -51,7 +51,7 @@ namespace HRMSystem2019B
                 sql += " and Employee.InDay > @Start and Employee.InDay < @End";
             }
             SqlParameter[] paras =
-           {
+            {
                 new SqlParameter("@Name", txtName.Text),
                 new SqlParameter("@DeId", cmbDepartment.SelectedValue.ToString()),
                 new SqlParameter("@Start", TimeIn.Value),
@@ -119,5 +119,6 @@ namespace HRMSystem2019B
             ExportExcel ee = new ExportExcel();
             ee.Export("Demo", DataGridView);
         }
+
     }
 }

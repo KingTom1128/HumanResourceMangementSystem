@@ -26,5 +26,8 @@ namespace HRMSystem.Model
         public byte[] Photo { get; set; }
         public string Remarks { get; set; }
         public string Resume { get; set; }
+
+        public DateTime InDateFrom { get; set; }
+        public DateTime InDateTo { get; set; }
     }
 }

@@ -51,6 +51,7 @@
     <Compile Include="OperationLogService.cs" />
     <Compile Include="OperatorService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SalaryService.cs" />
     <Compile Include="SqlHelper.cs" />
   </ItemGroup>
   <ItemGroup>

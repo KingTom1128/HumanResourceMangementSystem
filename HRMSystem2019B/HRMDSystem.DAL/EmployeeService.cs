@@ -144,6 +144,41 @@ namespace HRMDSystem.DAL
             return infors;
         }
 
+        public DataTable GetEmployeeList(Employee e)
+        {
+            List<string> whereList = new List<string>();
+            List<SqlParameter> paraList = new List<SqlParameter>();
+            string sql = "SELECT Id AS 编号,Number AS 工号,Name AS 姓名,InDay AS 入职日期,Nation AS 民族,NativePlace AS 籍贯 FROM Employee";
+            if (e != null)
+            {
+                if (!string.IsNullOrEmpty(e.Name))
+                {
+                    whereList.Add("Name LIKE '%' + @Name + '%'");
+                    paraList.Add(new SqlParameter("@Name", e.Name));
+                }
+                if (e.InDateFrom > DateTime.MinValue && e.InDateTo > DateTime.MinValue)
+                {
+                    whereList.Add("InDay >= @InDateFrom AND InDay <= @InDateTo");
+                    paraList.Add(new SqlParameter("@InDateFrom", e.InDateFrom));
+                    paraList.Add(new SqlParameter("@InDateTo", e.InDateTo));
+                }
+                if (e.DepartmentId != Guid.Empty)
+                {
+                    whereList.Add("DepartmentId = @DepartmentId");
+                    paraList.Add(new SqlParameter("@DepartmentId", e.DepartmentId));
+                }
+                string strWhere = string.Join("AND", whereList);
+                if (!string.IsNullOrEmpty(strWhere))
+                {
+                    sql += " WHERE " + strWhere;
+                }
+            }
+            return SqlHelper.GetDataTable(sql, paraList.ToArray());
+        }
+
+
+
+
         public DataTable GetList()
         {
             DataTable dt = new DataTable();

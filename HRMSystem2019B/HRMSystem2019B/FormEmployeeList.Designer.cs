@@ -52,11 +52,10 @@
             // DataGridView
             // 
             this.DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGridView.Location = new System.Drawing.Point(28, 201);
-            this.DataGridView.Margin = new System.Windows.Forms.Padding(4);
+            this.DataGridView.Location = new System.Drawing.Point(21, 161);
             this.DataGridView.Name = "DataGridView";
             this.DataGridView.RowTemplate.Height = 23;
-            this.DataGridView.Size = new System.Drawing.Size(981, 205);
+            this.DataGridView.Size = new System.Drawing.Size(736, 164);
             this.DataGridView.TabIndex = 0;
             // 
             // grbSearch
@@ -70,21 +69,18 @@
             this.grbSearch.Controls.Add(this.chbTime);
             this.grbSearch.Controls.Add(this.chbDepartment);
             this.grbSearch.Controls.Add(this.chbName);
-            this.grbSearch.Location = new System.Drawing.Point(28, 71);
-            this.grbSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.grbSearch.Location = new System.Drawing.Point(21, 57);
             this.grbSearch.Name = "grbSearch";
-            this.grbSearch.Padding = new System.Windows.Forms.Padding(4);
-            this.grbSearch.Size = new System.Drawing.Size(980, 105);
+            this.grbSearch.Size = new System.Drawing.Size(735, 84);
             this.grbSearch.TabIndex = 1;
             this.grbSearch.TabStop = false;
             this.grbSearch.Text = "搜索条件";
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(384, 62);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSearch.Location = new System.Drawing.Point(288, 50);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(177, 29);
+            this.btnSearch.Size = new System.Drawing.Size(133, 23);
             this.btnSearch.TabIndex = 8;
             this.btnSearch.Text = "搜索";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -93,54 +89,48 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(700, 26);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(525, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(22, 15);
+            this.label1.Size = new System.Drawing.Size(17, 12);
             this.label1.TabIndex = 7;
             this.label1.Text = "到";
             // 
             // TimeOut
             // 
-            this.TimeOut.Location = new System.Drawing.Point(731, 21);
-            this.TimeOut.Margin = new System.Windows.Forms.Padding(4);
+            this.TimeOut.Location = new System.Drawing.Point(548, 17);
             this.TimeOut.Name = "TimeOut";
-            this.TimeOut.Size = new System.Drawing.Size(168, 25);
+            this.TimeOut.Size = new System.Drawing.Size(127, 21);
             this.TimeOut.TabIndex = 6;
             // 
             // TimeIn
             // 
-            this.TimeIn.Location = new System.Drawing.Point(523, 21);
-            this.TimeIn.Margin = new System.Windows.Forms.Padding(4);
+            this.TimeIn.Location = new System.Drawing.Point(392, 17);
             this.TimeIn.Name = "TimeIn";
-            this.TimeIn.Size = new System.Drawing.Size(168, 25);
+            this.TimeIn.Size = new System.Drawing.Size(127, 21);
             this.TimeIn.TabIndex = 5;
             // 
             // cmbDepartment
             // 
             this.cmbDepartment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDepartment.FormattingEnabled = true;
-            this.cmbDepartment.Location = new System.Drawing.Point(113, 62);
-            this.cmbDepartment.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbDepartment.Location = new System.Drawing.Point(85, 50);
             this.cmbDepartment.Name = "cmbDepartment";
-            this.cmbDepartment.Size = new System.Drawing.Size(160, 23);
+            this.cmbDepartment.Size = new System.Drawing.Size(121, 20);
             this.cmbDepartment.TabIndex = 4;
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(113, 22);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtName.Location = new System.Drawing.Point(85, 18);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(160, 25);
+            this.txtName.Size = new System.Drawing.Size(121, 21);
             this.txtName.TabIndex = 3;
             // 
             // chbTime
             // 
             this.chbTime.AutoSize = true;
-            this.chbTime.Location = new System.Drawing.Point(384, 25);
-            this.chbTime.Margin = new System.Windows.Forms.Padding(4);
+            this.chbTime.Location = new System.Drawing.Point(288, 20);
             this.chbTime.Name = "chbTime";
-            this.chbTime.Size = new System.Drawing.Size(89, 19);
+            this.chbTime.Size = new System.Drawing.Size(72, 16);
             this.chbTime.TabIndex = 2;
             this.chbTime.Text = "入职时间";
             this.chbTime.UseVisualStyleBackColor = true;
@@ -148,10 +138,9 @@
             // chbDepartment
             // 
             this.chbDepartment.AutoSize = true;
-            this.chbDepartment.Location = new System.Drawing.Point(28, 65);
-            this.chbDepartment.Margin = new System.Windows.Forms.Padding(4);
+            this.chbDepartment.Location = new System.Drawing.Point(21, 52);
             this.chbDepartment.Name = "chbDepartment";
-            this.chbDepartment.Size = new System.Drawing.Size(59, 19);
+            this.chbDepartment.Size = new System.Drawing.Size(48, 16);
             this.chbDepartment.TabIndex = 1;
             this.chbDepartment.Text = "部门";
             this.chbDepartment.UseVisualStyleBackColor = true;
@@ -159,10 +148,9 @@
             // chbName
             // 
             this.chbName.AutoSize = true;
-            this.chbName.Location = new System.Drawing.Point(28, 25);
-            this.chbName.Margin = new System.Windows.Forms.Padding(4);
+            this.chbName.Location = new System.Drawing.Point(21, 20);
             this.chbName.Name = "chbName";
-            this.chbName.Size = new System.Drawing.Size(59, 19);
+            this.chbName.Size = new System.Drawing.Size(48, 16);
             this.chbName.TabIndex = 0;
             this.chbName.Text = "姓名";
             this.chbName.UseVisualStyleBackColor = true;
@@ -177,7 +165,7 @@
             this.toolStripButton4});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1040, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(780, 27);
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -223,13 +211,12 @@
             // 
             // FormEmployeeList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1040, 421);
+            this.ClientSize = new System.Drawing.Size(780, 337);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.grbSearch);
             this.Controls.Add(this.DataGridView);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormEmployeeList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormEmployeeList";
