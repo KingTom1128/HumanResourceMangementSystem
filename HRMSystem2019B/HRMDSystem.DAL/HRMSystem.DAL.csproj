@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DepartmentService.cs" />
+    <Compile Include="DictionaryService.cs" />
     <Compile Include="EmployeeService.cs" />
     <Compile Include="ExportExcel.cs" />
     <Compile Include="OperationLogService.cs" />

@@ -86,5 +86,12 @@ namespace HRMSystem2019B
             f1.MdiParent = this;
             f1.Show();
         }
+
+        private void 字典管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormDictionary f1 = new FormDictionary();
+            f1.MdiParent = this;
+            f1.Show();
+        }
     }
 }

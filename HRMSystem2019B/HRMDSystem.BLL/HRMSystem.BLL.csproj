@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Administrator.cs" />
     <Compile Include="Department.cs" />
+    <Compile Include="Dictionary.cs" />
     <Compile Include="EmployeeOperation.cs" />
     <Compile Include="LoginUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
