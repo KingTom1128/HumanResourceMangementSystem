@@ -69,10 +69,10 @@
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tssInfo});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 553);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 725);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(1209, 25);
+            this.statusStrip1.Size = new System.Drawing.Size(1585, 25);
             this.statusStrip1.TabIndex = 20;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -94,7 +94,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1209, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1585, 28);
             this.menuStrip1.TabIndex = 21;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -123,12 +123,14 @@
             this.系统锁定ToolStripMenuItem.Name = "系统锁定ToolStripMenuItem";
             this.系统锁定ToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
             this.系统锁定ToolStripMenuItem.Text = "系统锁定";
+            this.系统锁定ToolStripMenuItem.Click += new System.EventHandler(this.系统锁定ToolStripMenuItem_Click);
             // 
             // 计算器ToolStripMenuItem
             // 
             this.计算器ToolStripMenuItem.Name = "计算器ToolStripMenuItem";
             this.计算器ToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
             this.计算器ToolStripMenuItem.Text = "计算器";
+            this.计算器ToolStripMenuItem.Click += new System.EventHandler(this.计算器ToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
@@ -180,6 +182,7 @@
             this.公司信息管理ToolStripMenuItem.Name = "公司信息管理ToolStripMenuItem";
             this.公司信息管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.公司信息管理ToolStripMenuItem.Text = "公司信息管理";
+            this.公司信息管理ToolStripMenuItem.Click += new System.EventHandler(this.公司信息管理ToolStripMenuItem_Click);
             // 
             // 操作员管理ToolStripMenuItem
             // 
@@ -206,7 +209,7 @@
             // 员工管理ToolStripMenuItem1
             // 
             this.员工管理ToolStripMenuItem1.Name = "员工管理ToolStripMenuItem1";
-            this.员工管理ToolStripMenuItem1.Size = new System.Drawing.Size(216, 26);
+            this.员工管理ToolStripMenuItem1.Size = new System.Drawing.Size(144, 26);
             this.员工管理ToolStripMenuItem1.Text = "员工管理";
             this.员工管理ToolStripMenuItem1.Click += new System.EventHandler(this.员工管理ToolStripMenuItem1_Click);
             // 
@@ -231,6 +234,7 @@
             this.打印工资单ToolStripMenuItem.Name = "打印工资单ToolStripMenuItem";
             this.打印工资单ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.打印工资单ToolStripMenuItem.Text = "打印工资单";
+            this.打印工资单ToolStripMenuItem.Click += new System.EventHandler(this.打印工资单ToolStripMenuItem_Click);
             // 
             // 帮助ToolStripMenuItem
             // 
@@ -243,20 +247,21 @@
             // 关于我们ToolStripMenuItem
             // 
             this.关于我们ToolStripMenuItem.Name = "关于我们ToolStripMenuItem";
-            this.关于我们ToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
+            this.关于我们ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.关于我们ToolStripMenuItem.Text = "关于我们";
+            this.关于我们ToolStripMenuItem.Click += new System.EventHandler(this.关于我们ToolStripMenuItem_Click);
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1209, 578);
+            this.ClientSize = new System.Drawing.Size(1585, 750);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.lblDisplay);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormMain";

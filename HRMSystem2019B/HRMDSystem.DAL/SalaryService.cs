@@ -17,7 +17,7 @@ namespace HRMDSystem.DAL
         public DataTable GetSalarySheetItems(Guid sheetId)
         {
             string sql = @"select Employee.Id as 编号, Employee.Name as 姓名, SalarySheetItem.BaseSalary as 基本工资, SalarySheetItem.Bonus as 奖金, 
-                SalarySheetItem.Fine as 应扣,SalarySheetItem.Other as 其他 from Employee, SalarySheetItem 
+                SalarySheetItem.Fine as 罚款,SalarySheetItem.Other as 其他 from Employee, SalarySheetItem 
                 where Employee.Id = SalarySheetItem.EmployeeId and SalarySheetItem.SheetId = @sheetId";
             SqlParameter parameter = new SqlParameter("@sheetId", sheetId);
             return SqlHelper.GetDataTable(sql, parameter);

@@ -52,7 +52,6 @@ namespace HRMSystem2019B
             if (cmbYear.SelectedIndex == -1 || cmbMonth.SelectedIndex == -1 || cmbDepartment.SelectedIndex == -1)
             {
                 CommonHelper.FailedReply("不能为空！");
-                MessageBox.Show(ss.ToString());
                 return;
             }
 

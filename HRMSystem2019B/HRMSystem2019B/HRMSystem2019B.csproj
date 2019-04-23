@@ -33,6 +33,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="NPOI">
       <HintPath>..\NPOI.dll</HintPath>
     </Reference>
@@ -42,6 +47,8 @@
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -53,11 +60,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CrystalReportSalarySheet.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportSalarySheet.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FormAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAbout.Designer.cs">
+      <DependentUpon>FormAbout.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormAdminOperate.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormAdminOperate.Designer.cs">
       <DependentUpon>FormAdminOperate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCalculator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCalculator.Designer.cs">
+      <DependentUpon>FormCalculator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCompanyInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCompanyInformation.Designer.cs">
+      <DependentUpon>FormCompanyInformation.cs</DependentUpon>
     </Compile>
     <Compile Include="FormDepartment.cs">
       <SubType>Form</SubType>
@@ -82,6 +113,12 @@
     </Compile>
     <Compile Include="FormEmployeeUI.Designer.cs">
       <DependentUpon>FormEmployeeUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLock.Designer.cs">
+      <DependentUpon>FormLock.cs</DependentUpon>
     </Compile>
     <Compile Include="FormLogQuery.cs">
       <SubType>Form</SubType>
@@ -108,6 +145,12 @@
     <Compile Include="FormPasswordService.Designer.cs">
       <DependentUpon>FormPasswordService.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormPrintSalary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPrintSalary.Designer.cs">
+      <DependentUpon>FormPrintSalary.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormSalary.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,9 +159,24 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SalarySheetItemForReport.cs" />
+    <Compile Include="SalarySheetItemReport.cs" />
     <Compile Include="UserInfo.cs" />
+    <EmbeddedResource Include="CrystalReportSalarySheet.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportSalarySheet.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAbout.resx">
+      <DependentUpon>FormAbout.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormAdminOperate.resx">
       <DependentUpon>FormAdminOperate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCalculator.resx">
+      <DependentUpon>FormCalculator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCompanyInformation.resx">
+      <DependentUpon>FormCompanyInformation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormDepartment.resx">
       <DependentUpon>FormDepartment.cs</DependentUpon>
@@ -132,6 +190,9 @@
     <EmbeddedResource Include="FormEmployeeUI.resx">
       <DependentUpon>FormEmployeeUI.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormLock.resx">
+      <DependentUpon>FormLock.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLogQuery.resx">
       <DependentUpon>FormLogQuery.cs</DependentUpon>
     </EmbeddedResource>
@@ -143,6 +204,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormPasswordService.resx">
       <DependentUpon>FormPasswordService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPrintSalary.resx">
+      <DependentUpon>FormPrintSalary.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormSalary.resx">
       <DependentUpon>FormSalary.cs</DependentUpon>
@@ -198,6 +262,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\export.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

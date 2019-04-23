@@ -51,14 +51,6 @@ namespace HRMSystem2019B
             Application.Exit();
         }
 
-        private void 切换账号ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            FormLogin f1 = new FormLogin();
-            f1.StartPosition = FormStartPosition.CenterParent;
-            f1.ShowDialog();
-        }
-
         private void 日志查询ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormLogQuery f1 = new FormLogQuery();
@@ -90,6 +82,46 @@ namespace HRMSystem2019B
         private void 字典管理ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormDictionary f1 = new FormDictionary();
+            f1.MdiParent = this;
+            f1.Show();
+        }
+
+        private void 打印工资单ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormPrintSalary f1 = new FormPrintSalary();
+            f1.MdiParent = this;
+            f1.Show();
+        }
+
+        private void 关于我们ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormAbout f1 = new FormAbout();
+            f1.ShowDialog();
+        }
+
+        private void 系统锁定ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormLock f1 = new FormLock();
+            f1.ShowDialog();
+        }
+
+        private void 计算器ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormCalculator f1 = new FormCalculator();
+            f1.MdiParent = this;
+            f1.Show();
+        }
+
+        private void 切换账号ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormMain fm = new FormMain();
+            fm.Show();
+        }
+
+        private void 公司信息管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormCompanyInformation f1 = new FormCompanyInformation();
             f1.MdiParent = this;
             f1.Show();
         }
